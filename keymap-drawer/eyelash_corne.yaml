@@ -17,7 +17,7 @@ layers:
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - '&lhmt LEFT_SHIFT F'
   - G
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
@@ -42,13 +42,13 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
-  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-esc$$', h: BT}
+  - {t: '$$mdi:keyboard-space$$', h: MOVE}
   - {t: '$$mdi:keyboard-tab$$', h: Fn}
-  - {t: '$$mdi:keyboard-return$$', h: Symbols}
-  - {t: '$$mdi:backspace$$', h: Numbers}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: '$$mdi:backspace$$', h: NUMBER}
   - $$mdi:apple-keyboard-option$$
-  NUMBER:
+  BT:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
@@ -97,7 +97,7 @@ layers:
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  MOVE:
   - {t: '$$mdi:transfer$$', type: trans}
   - '!'
   - '@'
@@ -195,7 +195,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Symbols:
+  SYMBOL:
   - +
   - '&'
   - '*'
@@ -244,7 +244,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
-  Numbers:
+  NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}

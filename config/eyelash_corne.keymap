@@ -42,8 +42,8 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            // hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
-            // hold-trigger-on-release;
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47>;
+            hold-trigger-on-release;
         };
 
         rhm: right_homerow_mods {
@@ -55,8 +55,8 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            // hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 42 43 44>;
-            // hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 42 43 44>;
+            hold-trigger-on-release;
         };
 
  
@@ -83,7 +83,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp TAB    &kp Q           &kp W           &kp E               &kp R             &kp T                             &kp UP                &kp Y        &kp U              &kp I        &kp O           &kp P               &kp BSPC
-&td0       &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &mt RIGHT_SHIFT J  &mt RCTRL K  &mt LEFT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
+&td0       &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_CONTROL D  &lhmt LEFT_SHIFT F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &rhm RIGHT_SHIFT J  &rhm RCTRL K  &rhm LEFT_ALT L  &rhm RIGHT_GUI SEMI  &kp SQT
 &kp LCTRL  &kp Z           &kp X           &kp C               &kp V             &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M              &kp COMMA    &kp DOT         &kp FSLH            &kp ESC
                                            &lt 1 ESC           &lt 2 SPACE       &lt 3 TAB                                               &lt 4 ENTER  &lt 5 BSPC         &kp RALT
             >;
@@ -92,7 +92,7 @@
         };
 
         lower_layer {
-            display-name = "NUMBER";
+            display-name = "BT";
             bindings = <
 &trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
 &trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
@@ -104,7 +104,7 @@
         };
 
         raise_layer {
-            display-name = "SYMBOL";
+            display-name = "MOVE";
             bindings = <
 &trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
@@ -128,6 +128,7 @@
         };
 
         Symbols {
+            display-name = "SYMBOL";
             bindings = <
 &kp PLUS   &kp AMPS  &kp STAR   &kp GRAVE  &kp LBRC  &kp RBRC                    &trans          &trans  &trans           &trans           &trans    &trans    &trans
 &kp MINUS  &kp DLLR  &kp PRCNT  &kp CARET  &kp LPAR  &kp RPAR            &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT  &kp RCTRL        &kp LALT  &kp LGUI  &trans
@@ -137,6 +138,7 @@
         };
 
         Numbers {
+            display-name = "NUMBER";
             bindings = <
 &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans                    &trans          &trans  &trans           &trans           &trans    &trans    &trans
 &trans  &kp N4  &kp N5  &kp N6  &trans  &trans            &trans  &trans  &trans  &trans  &kp RIGHT_SHIFT  &kp RCTRL        &kp LALT  &kp LGUI  &trans

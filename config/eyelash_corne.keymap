@@ -33,17 +33,16 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        right_test: right_test_node {
+        rhm: right_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_TEST";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <28 0 13 42 1 5 14 15 16 17 18 29 30 31 32 33 34 42 43 44 2 3 4>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <155>;
-            require-prior-idle-ms = <122>;
+            label = "RIGHT_HOMEROW_MODS";
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 42 43 44>;
             hold-trigger-on-release;
         };
     };

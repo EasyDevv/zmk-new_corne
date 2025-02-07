@@ -44,7 +44,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-esc$$', h: BLUE}
   - {t: '$$mdi:keyboard-space$$', h: MOVE}
-  - {t: '$$mdi:keyboard-tab$$', h: Fn}
+  - {t: '$$mdi:keyboard-tab$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - $$mdi:apple-keyboard-option$$
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  Fn:
+  FN:
   - '&studio_unlock'
   - F1
   - F2

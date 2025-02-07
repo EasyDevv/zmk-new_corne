@@ -27,8 +27,8 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: RIGHT GUI, s: ':'}
-  - {t: '''', s: '"'}
-  - $$mdi:apple-keyboard-control$$
+  - RETURN
+  - $$mdi:apple-keyboard-shift$$
   - Z
   - X
   - C
@@ -41,7 +41,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:keyboard-esc$$
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:keyboard-esc$$', h: BLUE}
   - {t: '$$mdi:keyboard-space$$', h: MOVE}
   - {t: '$$mdi:keyboard-tab$$', h: Fn}

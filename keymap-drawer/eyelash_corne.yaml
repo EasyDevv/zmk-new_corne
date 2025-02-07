@@ -58,7 +58,7 @@ layers:
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
+  - $$mdi:arrow-up-bold$$
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -72,8 +72,8 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
   - $$mdi:arrow-right-bold$$
   - HOME
   - PG UP
@@ -293,3 +293,10 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-shift$$
+combos:
+- p: [30, 31]
+  k: Ctl+C
+  l: [QWERTY]
+- p: [30, 32]
+  k: Ctl+V
+  l: [QWERTY]

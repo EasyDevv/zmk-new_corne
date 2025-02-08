@@ -5,12 +5,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 /*
-
    &mmv_input_listener {
        input-processors = <&zip_xy_scaler 2 1>;
    };
@@ -19,13 +16,50 @@
        input-processors = <&zip_xy_scaler 2 1>;
    };
 
- */
+*/
+
+/* 
+KEY POSITIONS
+╭────────────────────────╮ ╭────────────────────────╮     
+│ 0   1   2   3   4   5  │ │ 7   8   9   10  11  12 │         
+│ 13  14  15  16  17  18 │ │ 22  23  24  25  26  27 │     
+│ 28  29  30  31  32  33 │ │ 36  37  38  39  40  41 │   
+╰───────────╮ 42  43  44 │ │ 45  46  47 ╭───────────╯     
+            ╰────────────╯ ╰────────────╯ 
+
+QWERTY POSITIONS
+╭────────────────────────╮ ╭────────────────────────╮     
+│ 0   Q   W   E   R   T  │ │ Y   U   I   O   P   12 │         
+│ 13  A   S   D   F   G  │ │ H   J   K   L   ;   27 │
+│ 28  Z   X   C   V   B  │ │ N   M   ,   .   /   41 │
+╰───────────╮ 42  43  44 │ │ 45  46  47 ╭───────────╯     
+            ╰────────────╯ ╰────────────╯ 
+
+JOYSTICK POSITIONS
+╭──────────╮
+│    6     │
+│ 19 35 20 │
+│    21    │
+╰──────────╯
+*/
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
-#define TAP_TERM_MS 320
+
+// homerow delay settings
+#define TAP_TERM_MS 340
 #define QUICK_TAP_MS 175
 #define REQ_PRIOR_IDLE_MS 150
+
+// key position settings
+#define LEFT_KEYS <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>
+#define RIGHT_KEYS <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>
+
+#define LEFT_THUMB_KEYS <42 43 44>
+#define RIGHT_THUMB_KEYS <45 46 47>
+#define ALL_THUMB_KEYS <42 43 44 45 46 47>
+
+#define JOYSTICK_KEYS <6 19 20 21 35> // up left right down click
 
 / {
     behaviors {
@@ -33,7 +67,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
         };
 
         lhm: left_homerow_mods {
@@ -45,7 +79,7 @@
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41 45 46 47 42 43 44>;
+            hold-trigger-key-positions = <RIGHT_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release;
         };
 
@@ -58,48 +92,8 @@
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 42 43 44 45 46 47>;
+            hold-trigger-key-positions = <LEFT_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release;
-        };
-
-        left: left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>;
-            tapping-term-ms = <(-1)>;
-        };
-
-        right: right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>;
-            tapping-term-ms = <1>;
-        };
-
-        joystic: joystic {
-            compatible = "zmk,behavior-hold-tap";
-            label = "JOYSTIC";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <19 6 21 35 20>;
-            tapping-term-ms = <1>;
-        };
-
-        thumb: thumb {
-            compatible = "zmk,behavior-hold-tap";
-            label = "THUMB";
-            bindings = <&none>, <&none>;
-
-            #binding-cells = <2>;
-            hold-trigger-key-positions = <42 43 44 45 46 47>;
-            tapping-term-ms = <1>;
         };
     };
 
@@ -120,58 +114,157 @@
     combos {
         compatible = "zmk,combos";
 
+        // Horizontal ==============================
+        // left first column - <2 3> <15 16> <30 31>
+        we {
+            bindings = <&kp LC(A)>;
+            key-positions = <2 3>;
+        };
+
+        sd {
+            bindings = <&kp LC(S)>;
+            key-positions = <15 16>;
+        };
+
         xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
-            layers = <0>;
+        };
+
+        // left second column - <3 4> <16 17> <31 32>
+        er {
+            bindings = <&trans>;
+            key-positions = <3 4>;
+        };
+
+        df {
+            bindings = <&trans>;
+            key-positions = <16 17>;
         };
 
         cv {
             bindings = <&kp LC(V)>;
-            key-positions = <32 31>;
-            layers = <0>;
+            key-positions = <31 32>;
         };
 
-        sd {
+        // right first column - <8 9> <23 24> <37 38>
+        ui {
+            bindings = <&kp BSPC>;
+            key-positions = <8 9>;
+        }
+
+        jk {
             bindings = <&kp A>;
-            key-positions = <15 16>;
-        };
+            key-positions = <23 24>;
+        }
 
-        df {
+        m_semi {
             bindings = <&kp A>;
-            key-positions = <16 17>;
-        };
+            key-positions = <37 38>;
+        }
 
-        we {
+        // right second column - <9 10> <24 25> <38 39>
+        io {
+            bindings = <&kp DEL>;
+            key-positions = <9 10>;
+        }
+
+        kl {
             bindings = <&kp A>;
-            key-positions = <2 3>;
-        };
+            key-positions = <24 25>;
+        }
 
-        er {
+        semi_comma {
             bindings = <&kp A>;
-            key-positions = <3 4>;
-        };
+            key-positions = <38 39>;
+        }
 
-        zx {
-            bindings = <&kp LC(Z)>;
-            key-positions = <29 30>;
-        };
 
-        as {
-            bindings = <&kp LC(A)>;
-            key-positions = <14 15>;
-        };
-
-        qw {
-            bindings = <&kp A>;
-            key-positions = <1 2>;
-        };
-
-        qa {
+        // Vertical ==============================
+        // Left first row - <2 15> <3 16> <4 17> <5 18>
+        ws {
             bindings = <&kp EXCL>;
-            key-positions = <1 14>;
+            key-positions = <2 15>;
         };
-    };
+
+        ed {
+            bindings = <&kp AT>;
+            key-positions = <3 16>;
+        };
+
+        rf {
+            bindings = <&kp DLLR>;
+            key-positions = <4 17>;
+        };
+
+        tg {
+            bindings = <&kp HASH>;
+            key-positions = <5 18>;
+        };
+
+        // Left second row - <15 30> <16 31> <17 32> <18 33>
+        sx {
+            bindings = <&kp PRCNT>;
+            key-positions = <15 30>;
+        };
+
+        dc {
+            bindings = <&kp CARET>;
+            key-positions = <16 31>;
+        };
+
+        fv {
+            bindings = <&kp AMPS>;
+            key-positions = <17 32>;
+        };
+
+        gb {
+            bindings = <&kp STAR>;
+            key-positions = <18 33>;
+        };
+
+        // Right first row - <7 22> <8 23> <9 24> <10 25>
+        yh {
+            bindings = <&kp MINUS>;
+            key-positions = <7 22>;
+        };
+
+        uj {
+            bindings = <&kp PLUS>;
+            key-positions = <8 23>;
+        };
+
+        ik {
+            bindings = <&trans>;
+            key-positions = <9 24>;
+        };
+
+        ol {
+            bindings = <&trans>;
+            key-positions = <10 25>;
+        };
+
+        // Right second row - <22 36> <23 37> <24 38> <25 39>
+        hn {
+            bindings = <&kp UNDER>;
+            key-positions = <22 36>;
+        };
+
+        jm {
+            bindings = <&kp EQUAL>;
+            key-positions = <23 37>;
+        };
+
+        k_semi {
+            bindings = <&trans>;
+            key-positions = <24 38>;
+        };
+
+        l_comma {
+            bindings = <&trans>;
+            key-positions = <25 39>;
+        };
+    }
 
     keymap {
         compatible = "zmk,keymap";
@@ -180,9 +273,9 @@
             display-name = "QWERTY";
             bindings = <
 &kp ESC         &kp Q            &kp W            &kp E              &kp R         &kp T                               &kp UP                &kp Y        &kp U         &kp I              &kp O            &kp P               &kp BSPC
-&kp TAB         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_SHIFT D  &lhm LCTRL F  &kp G                     &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H        &rhm LCTRL J  &rhm LEFT_SHIFT K  &rhm LEFT_ALT L  &rhm LEFT_GUI SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z            &kp X            &kp C              &kp V         &kp B        &kp LA(D)              &kp DOWN              &kp N        &kp M         &kp COMMA          &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
-                                                  &lt 1 LEFT_ALT     &lt 2 SPACE   &lt 3 ENTER                                               &lt 5 ENTER  &lt 4 BSPC    &kp RALT
+&kp TAB         &lhm LEFT_GUI A  &lhm LALT S      &lhm LSHFT D       &lhm LCTRL F  &kp G                     &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H        &rhm LCTRL J  &rhm LSHFT K       &rhm LALT L      &rhm LEFT_GUI SEMI  &kp ENTER
+&kp LSHFT       &kp Z            &kp X            &kp C              &kp V         &kp B        &kp LA(D)              &kp DOWN              &kp N        &kp M         &kp COMMA          &kp DOT          &kp FSLH            &kp RSHFT
+                                                  &lt 1 LALT         &lt 2 SPACE   &lt 3 ENTER                                               &lt 5 ENTER  &lt 4 BSPC    &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp LA(S) LA(A)>;
@@ -191,9 +284,9 @@
         lower_layer {
             display-name = "BT";
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp UP           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp LEFT         &kp DOWN         &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
+&trans  &trans           &trans          &trans        &trans        &trans                                         &mmv MOVE_UP                     &trans           &trans           &trans           &trans           &trans    &trans
+&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans           &trans           &trans           &trans           &trans    &trans
+&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans    &trans
                                          &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
             >;
 
@@ -201,12 +294,12 @@
         };
 
         raise_layer {
-            display-name = "MOVE";
+            display-name = "NAV";
             bindings = <
-&trans       &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&bootloader  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&sys_reset   &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                         &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&trans       &trans       &trans         &trans     &trans     &trans                               &mmv MOVE_UP                     &kp PG_UP    &kp BSPC       &kp MOVE_UP     &kp DEL         &trans   &trans 
+&bootloader  &trans       &trans         &trans     &trans     &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN    &kp MOVE_LEFT  &kp MOVE_DOWN   &kp MOVE_RIGHT  &trans   &kp ENTER 
+&sys_reset   &trans       &trans         &trans     &trans     &trans   &trans                      &mmv MOVE_DOWN                   &kp HOME     &kp END        &trans          &kp INS         &trans   &trans
+                                         &trans     &trans     &kp ENTER                                                             &kp ENTER    &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -227,10 +320,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE   &kp N1    &kp N2        &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &trans          &kp LBKT      &kp LBKT  &kp RBKT         &trans     &trans  &trans
-&kp CAPS    &kp N6    &kp NUMBER_7  &kp N8        &kp N9        &kp N0                  &trans  &trans  &trans  &kp LPAR      &kp LPAR  &kp RPAR         &kp SEMI   &trans  &trans
-&kp LSHIFT  &kp PLUS  &kp PLUS      &kp MINUS     &kp EQUAL     &trans        &trans            &trans          &kp LBRC      &kp LBRC  &kp RBRC         &kp COLON  &trans  &trans
-                                    &trans        &kp LCTRL     &kp LEFT_ALT                                    &kp LEFT_ALT  &trans    &kp RIGHT_SHIFT
+&kp GRAVE   &kp PLUS    &kp N1        &kp N2        &kp N3        &kp N0                          &trans          &kp LBKT      &kp LBKT  &kp RBKT         &trans     &trans  &trans &
+&kp CAPS    &kp MINUS   &kp N4        &kp N5        &kp N6        &kp N8                  &trans  &trans  &trans  &kp LPAR      &kp LPAR  &kp RPAR         &kp SEMI   &trans  &trans
+&kp LSHIFT  &kp EQUAL   &kp N7        &kp N8        &kp N9        &trans        &trans            &trans          &kp LBRC      &kp LBRC  &kp RBRC         &kp COLON  &trans  &trans
+                                      &kp LCTRL     &kp LALT      &kp ENTER                                       &kp LALT      &trans    &kp LSHFT
             >;
         };
 
@@ -240,7 +333,7 @@
 &kp LS(TILDE)  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                    &trans          &kp LBKT  &kp LBKT  &kp RBKT         &trans     &trans  &trans
 &kp CAPS       &kp CARET  &kp AMPS  &kp STAR   &kp LPAR   &kp RPAR             &trans  &trans  &trans  &kp LPAR  &kp LPAR  &kp RPAR         &kp SEMI   &trans  &trans
 &kp LSHIFT     &kp PLUS   &kp PLUS  &kp MINUS  &kp EQUAL  &trans     &trans            &trans          &kp LBRC  &kp LBRC  &kp RBRC         &kp COLON  &trans  &trans
-                                    &trans     &trans     &trans                                       &trans    &trans    &kp RIGHT_SHIFT
+                                    &trans     &trans     &trans                                       &trans    &trans    &kp RSHFT
             >;
         };
     };

@@ -55,12 +55,12 @@ JOYSTICK POSITIONS
 
 // key position settings
 
-#define LEFT_KEYS <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>
-#define RIGHT_KEYS <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>
-#define LEFT_THUMB_KEYS <42 43 44>
-#define RIGHT_THUMB_KEYS <45 46 47>
-#define ALL_THUMB_KEYS <42 43 44 45 46 47>
-#define JOYSTICK_KEYS <6 19 20 21 35> // up left right down click
+#define LEFT_KEYS 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33
+#define RIGHT_KEYS 7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41
+#define LEFT_THUMB_KEYS 42 43 44
+#define RIGHT_THUMB_KEYS 45 46 47 
+#define ALL_THUMB_KEYS 42 43 44 45 46 47
+#define JOYSTICK_KEYS 6 19 20 21 35 // up left right down click
 
 / {
     behaviors {

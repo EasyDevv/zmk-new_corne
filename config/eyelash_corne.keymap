@@ -61,6 +61,46 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33 34 42 42 43 44 45 46 47>;
             hold-trigger-on-release;
         };
+
+        left: left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33>;
+            tapping-term-ms = <(-1)>;
+        };
+
+        right: right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41>;
+            tapping-term-ms = <1>;
+        };
+
+        joystic: joystic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "JOYSTIC";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <19 6 21 35 20>;
+            tapping-term-ms = <1>;
+        };
+
+        thumb: thumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "THUMB";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <42 43 44 45 46 47>;
+            tapping-term-ms = <1>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -80,16 +120,56 @@
     combos {
         compatible = "zmk,combos";
 
-        Copy {
+        xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
             layers = <0>;
         };
 
-        Paste {
+        cv {
             bindings = <&kp LC(V)>;
-            key-positions = <30 32>;
+            key-positions = <32 31>;
             layers = <0>;
+        };
+
+        sd {
+            bindings = <&kp A>;
+            key-positions = <15 16>;
+        };
+
+        df {
+            bindings = <&kp A>;
+            key-positions = <16 17>;
+        };
+
+        we {
+            bindings = <&kp A>;
+            key-positions = <2 3>;
+        };
+
+        er {
+            bindings = <&kp A>;
+            key-positions = <3 4>;
+        };
+
+        zx {
+            bindings = <&kp LC(Z)>;
+            key-positions = <29 30>;
+        };
+
+        as {
+            bindings = <&kp LC(A)>;
+            key-positions = <14 15>;
+        };
+
+        qw {
+            bindings = <&kp A>;
+            key-positions = <1 2>;
+        };
+
+        qa {
+            bindings = <&kp EXCL>;
+            key-positions = <1 14>;
         };
     };
 
@@ -99,10 +179,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC         &kp Q            &kp W            &kp E                &kp R              &kp T                               &kp UP                &kp Y        &kp U              &kp I         &kp O            &kp P               &kp BSPC
-&kp TAB         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_CONTROL D  &lhm LEFT_SHIFT F  &kp G                     &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H        &rhm LEFT_SHIFT J  &rhm LCTRL K  &rhm LEFT_ALT L  &rhm LEFT_GUI SEMI  &kp RETURN
-&kp LEFT_SHIFT  &kp Z            &kp X            &kp C                &kp V              &kp B        &kp LA(D)              &kp DOWN              &kp N        &kp M              &kp COMMA     &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
-                                                  &lt 1 LEFT_ALT       &lt 2 SPACE        &lt 3 ENTER                                               &lt 5 ENTER  &lt 4 BSPC         &kp RALT
+&kp ESC         &kp Q            &kp W            &kp E              &kp R         &kp T                               &kp UP                &kp Y        &kp U         &kp I              &kp O            &kp P               &kp BSPC
+&kp TAB         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_SHIFT D  &lhm LCTRL F  &kp G                     &kp LEFT  &mkp LCLK  &kp RIGHT  &kp H        &rhm LCTRL J  &rhm LEFT_SHIFT K  &rhm LEFT_ALT L  &rhm LEFT_GUI SEMI  &kp ENTER
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C              &kp V         &kp B        &kp LA(D)              &kp DOWN              &kp N        &kp M         &kp COMMA          &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
+                                                  &lt 1 LEFT_ALT     &lt 2 SPACE   &lt 3 ENTER                                               &lt 5 ENTER  &lt 4 BSPC    &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp LA(S) LA(A)>;

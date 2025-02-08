@@ -79,7 +79,7 @@ JOYSTICK POSITIONS
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            hold-trigger-key-positions = <RIGHT_KEYS>;
+            hold-trigger-key-positions = <RIGHT_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release;
         };
 
@@ -92,7 +92,7 @@ JOYSTICK POSITIONS
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            hold-trigger-key-positions = <LEFT_KEYS>;
+            hold-trigger-key-positions = <LEFT_KEYS ALL_THUMB_KEYS>;
             hold-trigger-on-release;
         };
     };
@@ -119,6 +119,7 @@ JOYSTICK POSITIONS
         we {
             bindings = <&kp LC(A)>;
             key-positions = <2 3>;
+            layers = <0>;
         };
 
         sd {
@@ -151,33 +152,33 @@ JOYSTICK POSITIONS
         ui {
             bindings = <&kp BSPC>;
             key-positions = <8 9>;
-        }
+        };
 
         jk {
             bindings = <&kp A>;
             key-positions = <23 24>;
-        }
+        };
 
         m_semi {
             bindings = <&kp A>;
             key-positions = <37 38>;
-        }
+        };
 
         // right second column - <9 10> <24 25> <38 39>
         io {
             bindings = <&kp DEL>;
             key-positions = <9 10>;
-        }
+        };
 
         kl {
             bindings = <&kp A>;
             key-positions = <24 25>;
-        }
+        };
 
         semi_comma {
             bindings = <&kp A>;
             key-positions = <38 39>;
-        }
+        };
 
 
         // Vertical ==============================

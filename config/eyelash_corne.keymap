@@ -264,7 +264,7 @@ JOYSTICK POSITIONS
             bindings = <&trans>;
             key-positions = <25 39>;
         };
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";

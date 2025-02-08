@@ -296,6 +296,7 @@ layers:
 combos:
 - p: [2, 3]
   k: Ctl+A
+  l: [QWERTY]
 - p: [15, 16]
   k: Ctl+S
 - p: [30, 31]
@@ -306,6 +307,18 @@ combos:
   k: {t: '$$mdi:transfer$$', type: trans}
 - p: [31, 32]
   k: Ctl+V
+- p: [8, 9]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [23, 24]
+  k: A
+- p: [37, 38]
+  k: A
+- p: [9, 10]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [24, 25]
+  k: A
+- p: [38, 39]
+  k: A
 - p: [2, 15]
   k: '!'
 - p: [3, 16]

@@ -80,8 +80,8 @@ JOYSTICK POSITIONS
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            // hold-trigger-key-positions = <RIGHT_KEYS ALL_THUMB_KEYS>;
-            // hold-trigger-on-release;
+            hold-trigger-key-positions = <RIGHT_KEYS>, <ALL_THUMB_KEYS>;
+            hold-trigger-on-release;
         };
 
         rhm: right_homerow_mods {
@@ -93,8 +93,8 @@ JOYSTICK POSITIONS
             tapping-term-ms = <TAP_TERM_MS>;
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQ_PRIOR_IDLE_MS>;
-            // hold-trigger-key-positions = <LEFT_KEYS ALL_THUMB_KEYS>;
-            // hold-trigger-on-release;
+            hold-trigger-key-positions = <LEFT_KEYS>, <ALL_THUMB_KEYS>;
+            hold-trigger-on-release;
         };
     };
 

@@ -259,49 +259,73 @@ combos:
   l: [QWERTY]
 - p: [16, 17]
   k: {t: '$$mdi:transfer$$', type: trans}
+  l: [QWERTY]
 - p: [31, 32]
   k: Ctl+V
+  l: [QWERTY]
 - p: [8, 9]
   k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [QWERTY]
 - p: [23, 24]
   k: A
+  l: [QWERTY]
 - p: [37, 38]
   k: A
+  l: [QWERTY]
 - p: [9, 10]
   k: $$mdi:backspace-reverse-outline$$
+  l: [QWERTY]
 - p: [24, 25]
   k: A
+  l: [QWERTY]
 - p: [38, 39]
   k: A
+  l: [QWERTY]
 - p: [2, 15]
   k: '!'
+  l: [QWERTY]
 - p: [3, 16]
   k: '@'
+  l: [QWERTY]
 - p: [4, 17]
   k: $
+  l: [QWERTY]
 - p: [5, 18]
   k: '#'
+  l: [QWERTY]
 - p: [15, 30]
   k: '%'
+  l: [QWERTY]
 - p: [16, 31]
   k: ^
+  l: [QWERTY]
 - p: [17, 32]
   k: '&'
+  l: [QWERTY]
 - p: [18, 33]
   k: '*'
+  l: [QWERTY]
 - p: [7, 22]
   k: {t: '-', s: _}
+  l: [QWERTY]
 - p: [8, 23]
   k: +
+  l: [QWERTY]
 - p: [9, 24]
   k: {t: '$$mdi:transfer$$', type: trans}
+  l: [QWERTY]
 - p: [10, 25]
   k: {t: '$$mdi:transfer$$', type: trans}
+  l: [QWERTY]
 - p: [22, 36]
   k: _
+  l: [QWERTY]
 - p: [23, 37]
   k: {t: '=', s: +}
+  l: [QWERTY]
 - p: [24, 38]
   k: {t: '$$mdi:transfer$$', type: trans}
+  l: [QWERTY]
 - p: [25, 39]
   k: {t: '$$mdi:transfer$$', type: trans}
+  l: [QWERTY]

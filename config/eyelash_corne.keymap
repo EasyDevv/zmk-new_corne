@@ -124,7 +124,34 @@ JOYSTICK POSITIONS
         compatible = "zmk,combos";
 
         // Horizontal ==============================
-        // Left first column - <2 3> <15 16> <30 31>
+        // Left - <1 2> <14 15> <29 30>
+
+        qw {
+            bindings = <&none>;
+            key-positions = <1 2>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        };
+
+        as {
+            bindings = <&none>;
+            key-positions = <14 15>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        };
+
+        zx {
+            bindings = <&kp LC(Z)>;
+            key-positions = <29 30>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        };
+
+
+        // Left - <2 3> <15 16> <30 31>
 
         we {
             bindings = <&kp LC(A)>;
@@ -150,7 +177,7 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // Left second column - <3 4> <16 17> <31 32>
+        // Left - <3 4> <16 17> <31 32>
 
         er {
             bindings = <&kp LA(F4)>;
@@ -176,10 +203,10 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // Right first column - <8 9> <23 24> <37 38>
+        // Right - <8 9> <23 24> <37 38>
 
         ui {
-            bindings = <&kp BSPC>;
+            bindings = <&kp LC(Y)>;
             key-positions = <8 9>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -202,10 +229,10 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // Right second column - <9 10> <24 25> <38 39>
+        // Right - <9 10> <24 25> <38 39>
 
         io {
-            bindings = <&kp DEL>;
+            bindings = <&kp LG(DOWN)>;
             key-positions = <9 10>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -229,7 +256,7 @@ JOYSTICK POSITIONS
         };
 
         // Vertical ==============================
-        // Left first row - <2 15> <3 16> <4 17> <5 18>
+        // Left - <2 15> <3 16> <4 17> <5 18>
 
         ws {
             bindings = <&kp EXCL>;
@@ -263,7 +290,7 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
-        // Left second row - <15 30> <16 31> <17 32> <18 33>
+        // Left - <15 30> <16 31> <17 32> <18 33>
 
         sx {
             bindings = <&kp PRCNT>;
@@ -297,7 +324,7 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
-        // Right first row - <7 22> <8 23> <9 24> <10 25>
+        // Right - <7 22> <8 23> <9 24> <10 25>
 
         yh {
             bindings = <&kp MINUS>;
@@ -331,7 +358,7 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
-        // Right second row - <22 36> <23 37> <24 38> <25 39>
+        // Right - <22 36> <23 37> <24 38> <25 39>
 
         hn {
             bindings = <&kp UNDER>;
@@ -372,10 +399,10 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC         &kp Q            &kp W            &kp E              &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I              &kp O            &kp P               &kp BSPC
-&kp TAB         &lhm LEFT_GUI A  &lhm LEFT_ALT S  &lhm LEFT_SHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LEFT_SHIFT K  &rhm LEFT_ALT L  &rhm LEFT_GUI SEMI  &kp ENTER
-&kp LEFT_SHIFT  &kp Z            &kp X            &kp C              &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &kp COMMA          &kp DOT          &kp FSLH            &mt RIGHT LEFT
-                                                  &lt 1 LEFT_ALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &kp RALT
+&kp ESC         &kp Q            &kp W            &kp E              &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I              &kp O            &kp P               &mt BSPC DEL
+&kp TAB         &lhm LGUI A      &lhm LALT S      &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J      &rhm LSHIFT K      &rhm LALT L      &rhm LGUI SEMI      &kp ENTER
+&kp LSHIFT      &kp Z            &kp X            &kp C              &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &kp COMMA          &kp DOT          &kp FSLH            &mt RIGHT LEFT
+                                                  &lt 1 LALT         &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &kp RALT
             >;
 
             sensor-bindings = <&scroll>;
@@ -396,10 +423,10 @@ JOYSTICK POSITIONS
         raise_layer {
             display-name = "NAV";
             bindings = <
-&none     &none  &none     &none       &none      &none                  &none         &none  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL   &kp BSPC
-&kp CAPS  &none  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &kp HOME  &kp ESC
-&none     &none  &none     &none       &none      &none  &none           &none         &none  &none      &none     &none      &kp END   &kp INS
-                           &none       &none      &none                                &none  &none      &none
+&none     &none     &none     &none       &none      &none                  &none         &none  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL   &kp BSPC
+&kp CAPS  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &kp HOME  &kp ESC
+&none     &none     &none     &none       &none      &none  &none           &none         &none  &none      &none     &none      &kp END   &kp INS
+                              &none       &none      &none                                &none  &none      &none
             >;
 
             sensor-bindings = <&scroll>;

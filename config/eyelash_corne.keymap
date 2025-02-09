@@ -47,13 +47,21 @@ JOYSTICK POSITIONS
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
-// homerow delay settings
+// homerow therms
 
 #define TAP_TERM_MS 340
 #define QUICK_TAP_MS 175
 #define REQ_PRIOR_IDLE_MS 150
 
-// key position settings
+// combo terms
+
+#define COMBO_TERM_FAST 18
+#define COMBO_IDLE_FAST 150
+
+#define COMBO_TERM_SLOW 30
+#define COMBO_IDLE_SLOW 50
+
+// key positions
 
 #define LEFT_KEYS 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33
 #define RIGHT_KEYS 7 8 9 10 11 12 22 23 24 25 26 27 36 37 38 39 40 41
@@ -116,80 +124,108 @@ JOYSTICK POSITIONS
         compatible = "zmk,combos";
 
         // Horizontal ==============================
-        // left first column - <2 3> <15 16> <30 31>
-
-        // 레이어 추가, 타임 추가
+        // Left first column - <2 3> <15 16> <30 31>
 
         we {
             bindings = <&kp LC(A)>;
             key-positions = <2 3>;
             layers = <0>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <100>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         sd {
             bindings = <&kp LC(S)>;
             key-positions = <15 16>;
             layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
             layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // left second column - <3 4> <16 17> <31 32>
+        // Left second column - <3 4> <16 17> <31 32>
 
         er {
             bindings = <&trans>;
             key-positions = <3 4>;
             layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;        
         };
 
         df {
             bindings = <&trans>;
             key-positions = <16 17>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         cv {
             bindings = <&kp LC(V)>;
             key-positions = <31 32>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // right first column - <8 9> <23 24> <37 38>
+        // Right first column - <8 9> <23 24> <37 38>
 
         ui {
             bindings = <&kp BSPC>;
             key-positions = <8 9>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         jk {
             bindings = <&kp A>;
             key-positions = <23 24>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         m_semi {
             bindings = <&kp A>;
             key-positions = <37 38>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // right second column - <9 10> <24 25> <38 39>
+        // Right second column - <9 10> <24 25> <38 39>
 
         io {
             bindings = <&kp DEL>;
             key-positions = <9 10>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         kl {
             bindings = <&kp A>;
             key-positions = <24 25>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         semi_comma {
             bindings = <&kp A>;
             key-positions = <38 39>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
         // Vertical ==============================
@@ -198,21 +234,33 @@ JOYSTICK POSITIONS
         ws {
             bindings = <&kp EXCL>;
             key-positions = <2 15>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         ed {
             bindings = <&kp AT>;
             key-positions = <3 16>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         rf {
             bindings = <&kp DLLR>;
             key-positions = <4 17>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         tg {
             bindings = <&kp HASH>;
             key-positions = <5 18>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         // Left second row - <15 30> <16 31> <17 32> <18 33>
@@ -220,21 +268,33 @@ JOYSTICK POSITIONS
         sx {
             bindings = <&kp PRCNT>;
             key-positions = <15 30>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         dc {
             bindings = <&kp CARET>;
             key-positions = <16 31>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         fv {
             bindings = <&kp AMPS>;
             key-positions = <17 32>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         gb {
             bindings = <&kp STAR>;
             key-positions = <18 33>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         // Right first row - <7 22> <8 23> <9 24> <10 25>
@@ -242,21 +302,33 @@ JOYSTICK POSITIONS
         yh {
             bindings = <&kp MINUS>;
             key-positions = <7 22>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         uj {
             bindings = <&kp PLUS>;
             key-positions = <8 23>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         ik {
             bindings = <&trans>;
             key-positions = <9 24>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         ol {
             bindings = <&trans>;
             key-positions = <10 25>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         // Right second row - <22 36> <23 37> <24 38> <25 39>
@@ -264,21 +336,33 @@ JOYSTICK POSITIONS
         hn {
             bindings = <&kp UNDER>;
             key-positions = <22 36>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         jm {
             bindings = <&kp EQUAL>;
             key-positions = <23 37>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         k_semi {
             bindings = <&trans>;
             key-positions = <24 38>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
         l_comma {
             bindings = <&trans>;
             key-positions = <25 39>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
     };
 

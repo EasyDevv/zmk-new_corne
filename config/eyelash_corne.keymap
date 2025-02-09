@@ -396,10 +396,10 @@ JOYSTICK POSITIONS
         raise_layer {
             display-name = "NAV";
             bindings = <
-&none     &none  &none     &none       &none      &none                  &none         &kp PG_UP      &none     &kp UP    &none      &kp DEL   &kp BSPC
-&kp CAPS  &none  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp HOME  &kp ESC
-&none     &none  &none     &none       &none      &none  &none           &none         &none          &none     &none     &none      &kp END   &kp INS
-                           &none       &none      &none                                &none          &none     &none
+&none     &none  &none     &none       &none      &none                  &none         &none  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL   &kp BSPC
+&kp CAPS  &none  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &kp HOME  &kp ESC
+&none     &none  &none     &none       &none      &none  &none           &none         &none  &none      &none     &none      &kp END   &kp INS
+                           &none       &none      &none                                &none  &none      &none
             >;
 
             sensor-bindings = <&scroll>;

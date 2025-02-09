@@ -105,10 +105,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - PG UP
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-up-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PG DN
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-caps$$
@@ -120,7 +120,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgDn
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$

@@ -27,7 +27,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: LGUI, s: ':'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:arrow-up-bold$$'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -41,7 +41,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:arrow-left-bold$$'}
+  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:arrow-right-bold$$'}
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:keyboard-return$$', h: FN}

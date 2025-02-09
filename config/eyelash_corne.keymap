@@ -151,7 +151,7 @@ JOYSTICK POSITIONS
         // Left second column - <3 4> <16 17> <31 32>
 
         er {
-            bindings = <&kp LA(F4)>;
+            bindings = <&none>;
             key-positions = <3 4>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -185,7 +185,7 @@ JOYSTICK POSITIONS
         };
 
         jk {
-            bindings = <&kp A>;
+            bindings = <&none>;
             key-positions = <23 24>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -193,7 +193,7 @@ JOYSTICK POSITIONS
         };
 
         m_semi {
-            bindings = <&kp A>;
+            bindings = <&none>;
             key-positions = <37 38>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;

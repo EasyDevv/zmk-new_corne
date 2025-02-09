@@ -255,7 +255,7 @@ combos:
   k: Ctl+C
   l: [QWERTY]
 - p: [3, 4]
-  k: Alt+F4
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [16, 17]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -267,10 +267,10 @@ combos:
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [QWERTY]
 - p: [23, 24]
-  k: A
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [37, 38]
-  k: A
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [9, 10]
   k: $$mdi:backspace-reverse-outline$$

@@ -153,7 +153,7 @@ JOYSTICK POSITIONS
         // Left second column - <3 4> <16 17> <31 32>
 
         er {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <3 4>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -161,7 +161,7 @@ JOYSTICK POSITIONS
         };
 
         df {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <16 17>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -316,7 +316,7 @@ JOYSTICK POSITIONS
         };
 
         ik {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <9 24>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -324,7 +324,7 @@ JOYSTICK POSITIONS
         };
 
         ol {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <10 25>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -350,7 +350,7 @@ JOYSTICK POSITIONS
         };
 
         k_semi {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <24 38>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -358,7 +358,7 @@ JOYSTICK POSITIONS
         };
 
         l_comma {
-            bindings = <&trans>;
+            bindings = <&none>;
             key-positions = <25 39>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -384,10 +384,10 @@ JOYSTICK POSITIONS
         lower_layer {
             display-name = "BT";
             bindings = <
-&trans  &trans           &trans          &trans        &trans        &trans                                         &mmv MOVE_UP                     &kp PG_UP        &trans           &kp UP           &trans           &kp DEL   &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT        &kp HOME  &kp ESC
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp INS
-                                         &kp LCTRL     &trans        &kp LEFT_ALT                                                                    &kp ENTER        &trans           &trans
+&none  &none           &none          &none        &none        &none                                         &mmv MOVE_UP                     &kp PG_UP        &none           &kp UP           &none           &kp DEL   &kp BSPC
+&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PG_DN        &kp LEFT         &kp DOWN         &kp RIGHT        &kp HOME  &kp ESC
+&none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none        &none        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp INS
+                                         &kp LCTRL     &none        &kp LEFT_ALT                                                                    &kp ENTER        &none           &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -396,10 +396,10 @@ JOYSTICK POSITIONS
         raise_layer {
             display-name = "MOVE";
             bindings = <
-&trans       &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&none       &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &bootloader  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&sys_reset   &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                         &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&sys_reset   &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &none                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                         &none     &none     &kp SPACE                                                             &kp RET    &none     &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -409,9 +409,9 @@ JOYSTICK POSITIONS
             display-name = "FN";
             bindings = <
 &studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&none          &none      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&none          &sys_reset  &none     &bootloader  &none     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &none       &none     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                       &none       &none     &none                                                                   &none       &none     &none
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -420,10 +420,10 @@ JOYSTICK POSITIONS
         Number {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE   &kp N1    &kp N2        &kp NUMBER_3  &kp NUMBER_4  &kp N5                          &trans          &kp LBKT      &kp LBKT  &kp RBKT         &trans     &trans  &trans
-&kp CAPS    &kp N6    &kp NUMBER_7  &kp N8        &kp N9        &kp N0                  &trans  &trans  &trans  &kp LPAR      &kp LPAR  &kp RPAR         &kp SEMI   &trans  &trans
-&kp LSHIFT  &kp PLUS  &kp PLUS      &kp MINUS     &kp EQUAL     &trans        &trans            &trans          &kp LBRC      &kp LBRC  &kp RBRC         &kp COLON  &trans  &trans
-                                    &trans        &kp LCTRL     &kp LEFT_ALT                                    &kp LEFT_ALT  &trans    &kp RIGHT_SHIFT
+&kp GRAVE   &kp BSPC     &kp N7        &kp N8        &kp N9        &kp EQUAL                         &none          &none     &none     &none         &none  &none  &none
+&kp CAPS    &none     &kp N4        &kp N5        &kp N6        &kp MINUS                   &none  &none  &none   &none     &none     &none         &none  &none  &none
+&kp LSHIFT  &kp N0     &kp N1        &kp N2        &kp N3       &kp PLUS        &none              &none          &none     &none     &none         &none  &none  &none
+                                    &kp LCTRL     &kp LALT      &kp ENTER                                      &kp LALT  &none   &kp LSHFT
             >;
         };
     };

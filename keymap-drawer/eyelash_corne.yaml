@@ -255,7 +255,7 @@ combos:
   k: Ctl+C
   l: [QWERTY]
 - p: [3, 4]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: Alt+F4
   l: [QWERTY]
 - p: [16, 17]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}

@@ -213,7 +213,7 @@ JOYSTICK POSITIONS
         };
 
         kl {
-            bindings = <&kp A>;
+            bindings = <&none>;
             key-positions = <24 25>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -221,7 +221,7 @@ JOYSTICK POSITIONS
         };
 
         semi_comma {
-            bindings = <&kp A>;
+            bindings = <&none>;
             key-positions = <38 39>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -420,9 +420,9 @@ default_layer {
         Number {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE   &kp BSPC   &kp N7       &kp N8        &kp N9         &kp EQUAL                          &none          &none      &none       &none       &none       &none  &none 
-&kp CAPS    &none      &kp N4       &kp N5        &kp N6         &kp MINUS                   &none  &none  &none   &none      &kp LCTRL   &kp LSHIFT  &kp LALT    &none  &none
-&kp LSHIFT  &kp N0     &kp N1       &kp N2        &kp N3         &kp PLUS        &none              &none          &none      &none       &none       &none       &none  &none
+&kp GRAVE   &kp BSPC   &kp N7       &kp N8        &kp N9         &kp EQUAL                          &none          &none      &none       &none       &none       &kp DEL  &kp BSPC 
+&kp CAPS    &none      &kp N4       &kp N5        &kp N6         &kp MINUS                   &none  &none  &none   &none      &kp LCTRL   &kp LSHIFT  &kp LALT    &none    &kp ESC
+&kp LSHIFT  &kp N0     &kp N1       &kp N2        &kp N3         &kp PLUS        &none              &none          &none      &none       &none       &none       &none    &none
                                     &kp LCTRL     &kp LALT       &kp ENTER                                          &none      &none       &none
             >;
 

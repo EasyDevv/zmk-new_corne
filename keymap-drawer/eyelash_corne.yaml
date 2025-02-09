@@ -34,7 +34,7 @@ layers:
   - C
   - V
   - B
-  - Alt+D
+  - $$mdi:mouse-right-click-outline$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M

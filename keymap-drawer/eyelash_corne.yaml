@@ -12,9 +12,9 @@ layers:
   - I
   - O
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:backspace$$'}
   - $$mdi:keyboard-tab$$
-  - {t: A, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: F, h: '$$mdi:apple-keyboard-control$$'}
@@ -26,7 +26,7 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: '$$mdi:apple-keyboard-command$$', s: ':'}
+  - {t: ;, h: LGUI, s: ':'}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-shift$$
   - Z
@@ -112,7 +112,7 @@ layers:
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-caps$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - LGUI
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-control$$
@@ -245,6 +245,15 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
+- p: [1, 2]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  l: [QWERTY]
+- p: [14, 15]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  l: [QWERTY]
+- p: [29, 30]
+  k: Ctl+Z
+  l: [QWERTY]
 - p: [2, 3]
   k: Ctl+A
   l: [QWERTY]
@@ -264,7 +273,7 @@ combos:
   k: Ctl+V
   l: [QWERTY]
 - p: [8, 9]
-  k: {t: '$$mdi:backspace$$', type: backspace}
+  k: Ctl+Y
   l: [QWERTY]
 - p: [23, 24]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -273,7 +282,7 @@ combos:
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [9, 10]
-  k: $$mdi:backspace-reverse-outline$$
+  k: Gui+$$mdi:arrow-down-bold$$
   l: [QWERTY]
 - p: [24, 25]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}

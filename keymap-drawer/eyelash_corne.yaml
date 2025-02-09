@@ -207,8 +207,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-caps$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '4', s: $}
@@ -223,7 +223,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:keyboard-esc$$
   - $$mdi:apple-keyboard-shift$$
   - {t: '0', s: )}
   - {t: '1', s: '!'}
@@ -276,10 +276,10 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
   l: [QWERTY]
 - p: [24, 25]
-  k: A
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [38, 39]
-  k: A
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [2, 15]
   k: '!'

@@ -43,7 +43,7 @@ JOYSTICK POSITIONS
 ╰──────────╯
 */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 3000  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 6000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 // homerow therms

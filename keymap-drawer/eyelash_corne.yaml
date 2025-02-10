@@ -264,7 +264,7 @@ combos:
   k: Ctl+C
   l: [QWERTY]
 - p: [3, 4]
-  k: Alt+F4
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [16, 17]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -273,22 +273,22 @@ combos:
   k: Ctl+V
   l: [QWERTY]
 - p: [8, 9]
-  k: Ctl+Y
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [23, 24]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: {t: <, h: (}
   l: [QWERTY]
 - p: [37, 38]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: {t: '[', h: '{', s: '{'}
   l: [QWERTY]
 - p: [9, 10]
-  k: Gui+$$mdi:arrow-down-bold$$
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
 - p: [24, 25]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: {t: '>', h: )}
   l: [QWERTY]
 - p: [38, 39]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: {t: ']', h: '}', s: '}'}
   l: [QWERTY]
 - p: [2, 15]
   k: '!'
@@ -338,3 +338,7 @@ combos:
 - p: [25, 39]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
+- p: [11, 12]
+  k: Gui+$$mdi:arrow-down-bold$$
+- p: [0, 1]
+  k: Alt+F4

@@ -27,7 +27,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - {t: ;, h: LGUI, s: ':'}
-  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:arrow-up-bold$$'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:arrow-down-bold$$'}
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -321,7 +321,7 @@ combos:
   k: +
   l: [QWERTY]
 - p: [9, 24]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: ':'
   l: [QWERTY]
 - p: [10, 25]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -333,7 +333,7 @@ combos:
   k: {t: '=', s: +}
   l: [QWERTY]
 - p: [24, 38]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
+  k: {t: ;, s: ':'}
   l: [QWERTY]
 - p: [25, 39]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}

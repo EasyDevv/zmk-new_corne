@@ -320,7 +320,7 @@ JOYSTICK POSITIONS
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
-        }
+        };
 
         comma_slash {
             bindings = <&mt LBRC LBKT>;
@@ -328,7 +328,7 @@ JOYSTICK POSITIONS
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
-        }
+        };
 
         minimize {
             bindings = <&kp LG(DOWN)>;
@@ -344,7 +344,7 @@ JOYSTICK POSITIONS
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
-        }
+        };
 
         slash_edge {
             bindings = <&mt RBRC RBKT>;
@@ -352,7 +352,7 @@ JOYSTICK POSITIONS
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
-        }
+        };
 
         close {
             bindings = <&kp LA(F4)>;

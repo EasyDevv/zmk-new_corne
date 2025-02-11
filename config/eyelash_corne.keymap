@@ -42,7 +42,7 @@ JOYSTICK POSITIONS
 ╰──────────╯
 */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 6000  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 10000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 // homerow therms
@@ -126,7 +126,7 @@ JOYSTICK POSITIONS
         // Left - <1 2> <14 15> <29 30>
 
         qw {
-            bindings = <&none>;
+            bindings = <&kp LC(A)>;
             key-positions = <1 2>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -134,7 +134,7 @@ JOYSTICK POSITIONS
         };
 
         as {
-            bindings = <&none>;
+            bindings = <&kp LC(S)>;
             key-positions = <14 15>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -150,23 +150,6 @@ JOYSTICK POSITIONS
         };
 
         // Left - <2 3> <15 16> <30 31>
-
-        we {
-            bindings = <&kp LC(A)>;
-            key-positions = <2 3>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
-        sd {
-            bindings = <&kp LC(S)>;
-            key-positions = <15 16>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
         xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
@@ -176,23 +159,6 @@ JOYSTICK POSITIONS
         };
 
         // Left - <3 4> <16 17> <31 32>
-
-        er {
-            bindings = <&none>;
-            key-positions = <3 4>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
-        df {
-            bindings = <&none>;
-            key-positions = <16 17>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
         cv {
             bindings = <&kp LC(V)>;
             key-positions = <31 32>;
@@ -201,53 +167,27 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        // Right - <8 9> <23 24> <37 38>
+        // Right - <7 8> <22 23> <36 37>
 
-        ui {
+        yu {
             bindings = <&none>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        jk {
-            bindings = <&mt LPAR LT>;
-            key-positions = <23 24>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
-        m_semi {
-            bindings = <&mt LBRC LBKT>;
-            key-positions = <37 38>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
-        // Right - <9 10> <24 25> <38 39>
-
-        io {
+        hj {
             bindings = <&none>;
-            key-positions = <9 10>;
+            key-positions = <22 23>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        kl {
-            bindings = <&mt RPAR GT>;
-            key-positions = <24 25>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
-
-        semi_comma {
-            bindings = <&mt RBRC RBKT>;
-            key-positions = <38 39>;
+        nm {
+            bindings = <&none>;
+            key-positions = <36 37>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
@@ -374,30 +314,52 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
-        k_semi {
-            bindings = <&kp SEMI>;
-            key-positions = <24 38>;
+        l_semi {
+            bindings = <&mt LPAR LT>;
+            key-positions = <25 26>;
             layers = <0>;
-            timeout-ms = <COMBO_IDLE_SLOW>;
-            require-prior-idle-ms = <COMBO_TERM_SLOW>;
-        };
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        }
 
-        l_comma {
-            bindings = <&none>;
-            key-positions = <25 39>;
+        comma_slash {
+            bindings = <&mt LBRC LBKT>;
+            key-positions = <31 32>;
             layers = <0>;
-            timeout-ms = <COMBO_IDLE_SLOW>;
-            require-prior-idle-ms = <COMBO_TERM_SLOW>;
-        };
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        }
 
         minimize {
             bindings = <&kp LG(DOWN)>;
             key-positions = <11 12>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
+
+        semi_edge {
+            bindings = <&mt RPAR GT>;
+            key-positions = <26 27>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        }
+
+        slash_edge {
+            bindings = <&mt RBRC RBKT>;
+            key-positions = <40 41>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        }
 
         close {
             bindings = <&kp LA(F4)>;
             key-positions = <0 1>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
     };
 
@@ -407,9 +369,9 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I          &kp O        &kp P           &kp BSPC
-&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K  &rhm LALT L  &rhm LGUI SEMI  &mt DOWN UP
-&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &kp COMMA      &kp DOT      &kp FSLH        &mt RIGHT LEFT
+&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P            &kp BSPC
+&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &rhm LGUI DEL    &rhm DQT SQT
+&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &rhm SEMI COMMA   &rhm COLON DOT  &rhm EXCL QMARK  &rhm BSLH FSLH
                                       &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &kp RALT
             >;
 

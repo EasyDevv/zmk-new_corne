@@ -42,7 +42,7 @@ JOYSTICK POSITIONS
 ╰──────────╯
 */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 10000  // 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 8000  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
 // homerow therms
@@ -123,6 +123,14 @@ JOYSTICK POSITIONS
         compatible = "zmk,combos";
 
         // Horizontal ==============================
+        close {
+            bindings = <&kp LA(F4)>;
+            key-positions = <0 1>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        };
+
         // Left - <1 2> <14 15> <29 30>
 
         qw {
@@ -354,13 +362,6 @@ JOYSTICK POSITIONS
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        close {
-            bindings = <&kp LA(F4)>;
-            key-positions = <0 1>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
     };
 
     keymap {

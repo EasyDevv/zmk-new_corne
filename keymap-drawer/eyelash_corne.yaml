@@ -245,6 +245,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
+- p: [0, 1]
+  k: Alt+F4
+  l: [QWERTY]
 - p: [1, 2]
   k: Ctl+A
   l: [QWERTY]
@@ -325,7 +328,4 @@ combos:
   l: [QWERTY]
 - p: [40, 41]
   k: {t: ']', h: '}', s: '}'}
-  l: [QWERTY]
-- p: [0, 1]
-  k: Alt+F4
   l: [QWERTY]

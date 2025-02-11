@@ -46,7 +46,6 @@ JOYSTICK POSITIONS
 #define U_MOUSE_MOVE_EXPONENT 2
 #define U_MOUSE_MOVE_TIME 650
 #define U_MOUSE_MOVE_DELAY 0
-
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
@@ -130,6 +129,7 @@ JOYSTICK POSITIONS
         compatible = "zmk,combos";
 
         // Horizontal ==============================
+
         close {
             bindings = <&kp LA(F4)>;
             key-positions = <0 1>;
@@ -165,6 +165,7 @@ JOYSTICK POSITIONS
         };
 
         // Left - <2 3> <15 16> <30 31>
+
         xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
@@ -174,6 +175,7 @@ JOYSTICK POSITIONS
         };
 
         // Left - <3 4> <16 17> <31 32>
+
         cv {
             bindings = <&kp LC(V)>;
             key-positions = <31 32>;
@@ -330,7 +332,7 @@ JOYSTICK POSITIONS
         };
 
         l_semi {
-            bindings = <&rhm LPAR LT>;
+            bindings = <&rhm LT LPAR>;
             key-positions = <25 26>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -338,7 +340,7 @@ JOYSTICK POSITIONS
         };
 
         dot_slash {
-            bindings = <&rhm LBRC LBKT>;
+            bindings = <&rhm LEFT_BRACKET LBRC>;
             key-positions = <39 40>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -354,7 +356,7 @@ JOYSTICK POSITIONS
         };
 
         semi_edge {
-            bindings = <&rhm RPAR GT>;
+            bindings = <&rhm GT RPAR>;
             key-positions = <26 27>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -362,13 +364,12 @@ JOYSTICK POSITIONS
         };
 
         slash_edge {
-            bindings = <&rhm RBRC RBKT>;
+            bindings = <&rhm RBKT RS(RBRC)>;
             key-positions = <40 41>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
-
     };
 
     keymap {
@@ -377,9 +378,9 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P            &kp BSPC
-&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &rhm LGUI DEL    &rhm DQT SQT
-&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &rhm SEMI COMMA   &rhm COLON DOT  &rhm EXCL QMARK  &rhm BSLH FSLH
+&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I            &kp O           &kp P            &kp BSPC
+&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K    &rhm LALT L     &rhm LGUI DEL    &rhm DQT SQT
+&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &rhm SEMI COMMA  &rhm COLON DOT  &rhm EXCL QMARK  &rhm BSLH FSLH
                                       &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &kp RALT
             >;
 

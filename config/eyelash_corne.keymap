@@ -315,16 +315,16 @@ JOYSTICK POSITIONS
         };
 
         l_semi {
-            bindings = <&mt LPAR LT>;
+            bindings = <&rhm LPAR LT>;
             key-positions = <25 26>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
 
-        comma_slash {
-            bindings = <&mt LBRC LBKT>;
-            key-positions = <31 32>;
+        dot_slash {
+            bindings = <&rhm LBRC LBKT>;
+            key-positions = <39 40>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
@@ -339,7 +339,7 @@ JOYSTICK POSITIONS
         };
 
         semi_edge {
-            bindings = <&mt RPAR GT>;
+            bindings = <&rhm RPAR GT>;
             key-positions = <26 27>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -347,7 +347,7 @@ JOYSTICK POSITIONS
         };
 
         slash_edge {
-            bindings = <&mt RBRC RBKT>;
+            bindings = <&rhm RBRC RBKT>;
             key-positions = <40 41>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;

@@ -314,6 +314,18 @@ combos:
 - p: [25, 26]
   k: {t: <, h: (}
   l: [QWERTY]
+- p: [31, 32]
+  k: {t: '[', h: '{', s: '{'}
+  l: [QWERTY]
+- p: [11, 12]
+  k: Gui+$$mdi:arrow-down-bold$$
+  l: [QWERTY]
 - p: [26, 27]
   k: {t: '>', h: )}
+  l: [QWERTY]
+- p: [40, 41]
+  k: {t: ']', h: '}', s: '}'}
+  l: [QWERTY]
+- p: [0, 1]
+  k: Alt+F4
   l: [QWERTY]

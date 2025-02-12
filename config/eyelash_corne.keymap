@@ -44,10 +44,10 @@ JOYSTICK POSITIONS
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 8000  // 600
 #define U_MOUSE_MOVE_EXPONENT 2
-#define U_MOUSE_MOVE_TIME 650
+// #define U_MOUSE_MOVE_TIME 650
 #define U_MOUSE_MOVE_DELAY 0
 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100a
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
 #define U_MOUSE_SCROLL_DELAY 0
@@ -65,6 +65,10 @@ JOYSTICK POSITIONS
 #define COMBO_TERM_SLOW 30
 #define COMBO_IDLE_SLOW 50
 
+// tapdance terms
+
+#define TAPDANCE_TERM 200
+
 // key positions
 
 #define LEFT_KEYS 0 1 2 3 4 5 13 14 15 16 17 18 28 29 30 31 32 33
@@ -76,12 +80,57 @@ JOYSTICK POSITIONS
 
 / {
     behaviors {
-        td0: td0 {
+        td_dot_comma: td_dot_comma {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp DOT>, <&kp COMMA>;
         };
+
+        td_colon_semi: td_colon_semi {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp COLON>, <&kp SEMI>;
+        };
+
+        td_lpar: td_lpar {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp LPAR>, <&kp LBKT>; 
+        };
+
+        td_rpar: td_rpar {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp RPAR>, <&kp RBKT>; 
+        };
+
+        td_lbrc: td_lbrc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp LBRC>, <&kp LT>;
+        };
+
+        td_rbrc: td_rbrc {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp RBRC>, <&kp GT>;
+        };
+
+        };
+
+        td_sqt_dqt: td_sqt_dqt {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
+
 
         lhm: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -193,7 +242,7 @@ JOYSTICK POSITIONS
         };
 
         hj {
-            bindings = <&none>;
+            bindings = <&kp RALT>;
             key-positions = <22 23>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -296,7 +345,7 @@ JOYSTICK POSITIONS
         };
 
         ik {
-            bindings = <&kp COLON>;
+            bindings = <&none>;
             key-positions = <9 24>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -304,7 +353,7 @@ JOYSTICK POSITIONS
         };
 
         ol {
-            bindings = <&none>;
+            bindings = <&kp QMARK>;
             key-positions = <10 25>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
@@ -377,10 +426,10 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P            &kp BSPC
-&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &rhm LGUI DEL    &rhm DQT SQT
-&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &rhm SEMI COMMA   &rhm COLON DOT  &rhm EXCL QMARK  &rhm BSLH FSLH
-                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &kp RALT
+&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P       &td_sqt_dqt
+&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_rpar
+&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &td_dot_comma     &td_colon_semi  &td_lbrc    &td_rpar           
+                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &rhm LGUI DEL
             >;
 
             sensor-bindings = <&scroll>;

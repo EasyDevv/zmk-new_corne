@@ -122,8 +122,6 @@ JOYSTICK POSITIONS
             bindings = <&kp RBRC>, <&kp GT>;
         };
 
-        };
-
         td_sqt_dqt: td_sqt_dqt {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;

@@ -179,6 +179,7 @@ JOYSTICK POSITIONS
         compatible = "zmk,combos";
 
         // Horizontal ==============================
+
         close {
             bindings = <&kp LA(F4)>;
             key-positions = <0 1>;
@@ -214,6 +215,7 @@ JOYSTICK POSITIONS
         };
 
         // Left - <2 3> <15 16> <30 31>
+
         xc {
             bindings = <&kp LC(C)>;
             key-positions = <30 31>;
@@ -223,6 +225,7 @@ JOYSTICK POSITIONS
         };
 
         // Left - <3 4> <16 17> <31 32>
+
         cv {
             bindings = <&kp LC(V)>;
             key-positions = <31 32>;
@@ -379,7 +382,7 @@ JOYSTICK POSITIONS
         };
 
         l_semi {
-            bindings = <&rhm LPAR LT>;
+            bindings = <&rhm LT LPAR>;
             key-positions = <25 26>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -387,7 +390,7 @@ JOYSTICK POSITIONS
         };
 
         dot_slash {
-            bindings = <&rhm LBRC LBKT>;
+            bindings = <&rhm LEFT_BRACKET LBRC>;
             key-positions = <39 40>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -403,7 +406,7 @@ JOYSTICK POSITIONS
         };
 
         semi_edge {
-            bindings = <&rhm RPAR GT>;
+            bindings = <&rhm GT RPAR>;
             key-positions = <26 27>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -411,13 +414,12 @@ JOYSTICK POSITIONS
         };
 
         slash_edge {
-            bindings = <&rhm RBRC RBKT>;
+            bindings = <&rhm RBKT RS(RBRC)>;
             key-positions = <40 41>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
         };
-
     };
 
     keymap {

@@ -315,17 +315,17 @@ combos:
   k: {t: '=', s: +}
   l: [QWERTY]
 - p: [25, 26]
-  k: {t: <, h: (}
+  k: {t: (, h: <}
   l: [QWERTY]
 - p: [39, 40]
-  k: {t: '[', h: '{', s: '{'}
+  k: {t: '{', h: '['}
   l: [QWERTY]
 - p: [11, 12]
   k: Gui+$$mdi:arrow-down-bold$$
   l: [QWERTY]
 - p: [26, 27]
-  k: {t: '>', h: )}
+  k: {t: ), h: '>'}
   l: [QWERTY]
 - p: [40, 41]
-  k: {t: ']', h: '}', s: '}'}
+  k: {t: 'Sft+}', h: ']'}
   l: [QWERTY]

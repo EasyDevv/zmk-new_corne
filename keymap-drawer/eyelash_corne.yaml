@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - '&td_sqt_dqt'
+  - '&td_sqt'
   - $$mdi:keyboard-tab$$
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -27,7 +27,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - '&td_lpar'
-  - '&td_rpar'
+  - '&td_lbkt'
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -41,7 +41,7 @@ layers:
   - '&td_dot'
   - '&td_colon_semi'
   - '&td_lbrc'
-  - '&td_rbrc'
+  - '&td_lt'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: LCLK, h: FN}

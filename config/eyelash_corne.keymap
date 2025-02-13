@@ -67,7 +67,7 @@ JOYSTICK POSITIONS
 
 // tapdance terms
 
-#define TAPDANCE_TERM 600
+#define TAPDANCE_TERM 400
 
 // key positions
 
@@ -80,7 +80,7 @@ JOYSTICK POSITIONS
 
 / {
     behaviors {
-        td_dot_comma: td_dot_comma {
+        td_dot: td_dot {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
@@ -428,8 +428,8 @@ JOYSTICK POSITIONS
             bindings = <
 &kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P       &td_sqt_dqt
 &kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_rpar
-&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &td_dot_comma     &td_colon_semi  &td_lbrc    &td_rbrc
-                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &rhm LGUI DEL
+&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &td_dot     &td_colon_semi  &td_lbrc    &td_rbrc
+                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 LCLK                                                                &lt 3 ENTER  &lt 4 BSPC    &rhm LGUI DEL
             >;
 
             sensor-bindings = <&scroll>;

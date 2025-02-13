@@ -41,7 +41,7 @@ layers:
   - '&td_dot_comma'
   - '&td_colon_semi'
   - '&td_lbrc'
-  - '&td_rpar'
+  - '&td_rbrc'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:keyboard-return$$', h: FN}

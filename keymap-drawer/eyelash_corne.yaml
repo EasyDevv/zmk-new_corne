@@ -38,13 +38,13 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&td_dot_comma'
+  - '&td_dot'
   - '&td_colon_semi'
   - '&td_lbrc'
   - '&td_rbrc'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: '$$mdi:keyboard-return$$', h: FN}
+  - {t: LCLK, h: FN}
   - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LGUI}

@@ -44,7 +44,7 @@ layers:
   - '&td_lt'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: LCLK, h: FN}
+  - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', h: NUMBER}
   - {t: '$$mdi:backspace-reverse-outline$$', h: LGUI}

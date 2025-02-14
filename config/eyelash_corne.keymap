@@ -107,7 +107,7 @@ JOYSTICK POSITIONS
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
             bindings = <&kp LBRC>, <&kp RBRC>;
-        }
+        };
 
         td_lt: td_lt {
             compatible = "zmk,behavior-tap-dance";

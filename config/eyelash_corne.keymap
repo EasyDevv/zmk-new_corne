@@ -67,7 +67,7 @@ JOYSTICK POSITIONS
 
 // tapdance terms
 
-#define TAPDANCE_TERM 400
+#define TAPDANCE_TERM 300
 
 // key positions
 
@@ -128,6 +128,20 @@ JOYSTICK POSITIONS
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
             bindings = <&kp SQT>, <&kp DQT>;
+        };
+
+        td_slash: td_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
+        };
+
+        td_copy: td_copy {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&kp LC(C)>, <&kp LC(V)>, <&kp LC(X)>;
         };
 
 
@@ -216,7 +230,7 @@ JOYSTICK POSITIONS
         // Left - <2 3> <15 16> <30 31>
 
         xc {
-            bindings = <&kp LC(C)>;
+            bindings = <&none>;
             key-positions = <30 31>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -226,7 +240,7 @@ JOYSTICK POSITIONS
         // Left - <3 4> <16 17> <31 32>
 
         cv {
-            bindings = <&kp LC(V)>;
+            bindings = <&none>;
             key-positions = <31 32>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -244,7 +258,7 @@ JOYSTICK POSITIONS
         };
 
         hj {
-            bindings = <&kp RALT>;
+            bindings = <&none>;
             key-positions = <22 23>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -381,7 +395,7 @@ JOYSTICK POSITIONS
         };
 
         l_semi {
-            bindings = <&rhm LT LPAR>;
+            bindings = <&none>;
             key-positions = <25 26>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -389,7 +403,7 @@ JOYSTICK POSITIONS
         };
 
         dot_slash {
-            bindings = <&rhm LEFT_BRACKET LBRC>;
+            bindings = <&none>;
             key-positions = <39 40>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -405,7 +419,7 @@ JOYSTICK POSITIONS
         };
 
         semi_edge {
-            bindings = <&rhm GT RPAR>;
+            bindings = <&none>;
             key-positions = <26 27>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
@@ -413,8 +427,17 @@ JOYSTICK POSITIONS
         };
 
         slash_edge {
-            bindings = <&rhm RBKT RS(RBRC)>;
+            bindings = <&none>;
             key-positions = <40 41>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_FAST>;
+            require-prior-idle-ms = <COMBO_TERM_FAST>;
+        };
+
+        // Special ==============================
+        hangul {
+            bindings = <&kp RALT>;
+            key-positions = <23 9>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;
@@ -427,10 +450,10 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y        &kp U         &kp I             &kp O           &kp P       &td_sqt
-&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H        &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_lbkt
-&kp LSHIFT  &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N        &kp M         &td_dot           &td_colon_semi  &td_lbrc    &td_lt
-                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 ENTER                                                                &lt 3 ENTER  &lt 4 BSPC    &rhm LGUI DEL
+&kp ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y         &kp U         &kp I             &kp O           &kp P       &td_sqt
+&kp TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_lbkt
+&td_copy    &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N         &kp M         &td_dot           &td_colon_semi  &td_lbrc    &td_lt
+                                      &lt 1 LALT     &lt 2 SPACE   &lt 3 RALT                                                                 &lt 4 ENTER   &kp BSPC      &td_slash
             >;
 
             sensor-bindings = <&scroll>;
@@ -439,8 +462,8 @@ JOYSTICK POSITIONS
         lower_layer {
             display-name = "BT";
             bindings = <
-&none  &none            &none           &none         &none         &none                                     &mmv UP                &none            &none            &none            &none            &none  &none
-&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv LEFT  &mkp RCLK  &mmv RIGHT  &none            &none            &none            &none            &none  &none
+&none  &none            &none           &none         &none         &none                                     &mmv UP                &none            &kp PG_UP        &kp UP           &kp PG_DN            &none  &none
+&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv LEFT  &mkp RCLK  &mmv RIGHT  &none            &kp LEFT         &kp DOWN         &kp RIGHT            &none  &none
 &none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none         &none         &rgb_ug RGB_EFF  &kp C_MUTE               &mmv DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none
                                         &none         &none         &none                                                            &none            &none            &none
             >;

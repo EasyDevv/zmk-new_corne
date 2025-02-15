@@ -27,7 +27,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - '&td_lpar'
-  - '&td_lbkt'
+  - '&td_lbrc'
   - '&td_copy'
   - Z
   - X
@@ -40,7 +40,7 @@ layers:
   - M
   - '&td_dot'
   - '&td_colon_semi'
-  - '&td_lbrc'
+  - '&td_lbkt'
   - '&td_lt'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}
   - {t: '$$mdi:keyboard-space$$', h: NAV}

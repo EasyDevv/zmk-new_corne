@@ -141,7 +141,7 @@ JOYSTICK POSITIONS
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
-            bindings = <&kp LC(C)>, <&kp LC(V)>, <&kp LC(X)>;
+            bindings = <&kp LC(V)>, <&kp LC(C)>, <&kp LC(X)>;
         };
 
 

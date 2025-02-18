@@ -56,7 +56,7 @@ JOYSTICK POSITIONS
 
 #define TAP_TERM_MS 340
 #define QUICK_TAP_MS 175
-#define REQ_PRIOR_IDLE_MS 150
+#define REQ_PRIOR_IDLE_MS 120
 
 // combo terms
 

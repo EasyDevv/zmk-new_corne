@@ -38,8 +38,8 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
-  - '&td_dot'
-  - '&td_colon_semi'
+  - {t: ., h: ',', s: '>'}
+  - {t: ':', h: ;}
   - '&td_lbkt'
   - '&td_lt'
   - {t: '$$mdi:apple-keyboard-option$$', h: BT}

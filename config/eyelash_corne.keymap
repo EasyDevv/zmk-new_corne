@@ -134,7 +134,7 @@ JOYSTICK POSITIONS
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
-            bindings = <&rhm BLASH SLASH>, <&kp PIPE>;
+            bindings = <&mt BLASH SLASH>, <&kp PIPE>;
         };
 
         td_copy: td_copy {

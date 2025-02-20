@@ -141,7 +141,7 @@ JOYSTICK POSITIONS
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <TAPDANCE_TERM>;
-            bindings = <&kp LC(V)>, <&kp LC(C)>, <&kp LC(X)>;
+            bindings = <&lhm LC(C) LC(V)>,  <&kp LC(X)>;
         };
 
 
@@ -437,7 +437,7 @@ JOYSTICK POSITIONS
         // Special ==============================
         hangul {
             bindings = <&kp RALT>;
-            key-positions = <23 9>;
+            key-positions = <18 22>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;

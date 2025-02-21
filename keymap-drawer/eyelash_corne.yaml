@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - '&td_sqt'
-  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-tab-reverse$$'}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-shift$$'}

@@ -56,7 +56,7 @@ JOYSTICK POSITIONS
 
 #define TAP_TERM_MS 340
 #define QUICK_TAP_MS 175
-#define REQ_PRIOR_IDLE_MS 120
+#define REQ_PRIOR_IDLE_MS 140
 
 // combo terms
 
@@ -436,8 +436,8 @@ JOYSTICK POSITIONS
 
         // Special ==============================
         hangul {
-            bindings = <&kp RALT>;
-            key-positions = <18 22>;
+            bindings = <&none>;
+            key-positions = <44 45>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;

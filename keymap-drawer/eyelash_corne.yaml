@@ -329,6 +329,6 @@ combos:
 - p: [40, 41]
   k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]
-- p: [18, 22]
-  k: $$mdi:apple-keyboard-option$$
+- p: [44, 45]
+  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]

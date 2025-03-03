@@ -1,6 +1,6 @@
 layers:
   QWERTY:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:keyboard-esc$$', h: BT}
   - Q
   - W
   - E
@@ -28,7 +28,7 @@ layers:
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
   - '&td_lpar'
   - '&td_lbrc'
-  - '&td_copy'
+  - {t: Ctl+Y, h: Ctl+Z}
   - Z
   - X
   - C
@@ -42,14 +42,14 @@ layers:
   - {t: ':', h: ;}
   - '&td_lbkt'
   - '&td_lt'
-  - {t: '$$mdi:apple-keyboard-option$$', h: BT}
+  - '&td_copy'
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: '$$mdi:apple-keyboard-option$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_slash'
   BT:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -91,7 +91,7 @@ layers:
   - RGB BRD
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}

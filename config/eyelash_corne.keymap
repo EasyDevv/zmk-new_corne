@@ -1,22 +1,29 @@
-#include <dt-bindings/zmk/mouse.h>
 #include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-/*
-   &mmv_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-   };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-   &msc_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
-   };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-*/
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <100>;       // 300
+    delay-ms = <0>;                   // 0
+};
+
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
+};
+
 /* 
 KEY POSITIONS
 ╭────────────────────────╮ ╭────────────────────────╮     
@@ -42,12 +49,13 @@ JOYSTICK POSITIONS
 ╰──────────╯
 */
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 8000  // 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+
 #define U_MOUSE_MOVE_EXPONENT 2
 // #define U_MOUSE_MOVE_TIME 650
 #define U_MOUSE_MOVE_DELAY 0
 
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100a
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
 #define U_MOUSE_SCROLL_DELAY 0
@@ -184,8 +192,7 @@ JOYSTICK POSITIONS
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        // tap-ms = <30>;
+        tap-ms = <100>;
     };
 
     combos {
@@ -486,10 +493,10 @@ JOYSTICK POSITIONS
         FN {
             display-name = "FN";
             bindings = <
-&kp GRAVE   &kp F12  &kp F7  &kp F8     &kp F9    &kp EQUAL                  &none         &none  &none      &none       &none     &none  &none
-&kp CAPS    &kp F11  &kp F4  &kp F5     &kp F6    &kp MINUS           &none  &none  &none  &none  &kp LCTRL  &kp LSHIFT  &kp LALT  &none  &bootloader
-&kp LSHIFT  &kp F10  &kp F1  &kp F2     &kp F3    &kp PLUS   &none           &none         &none  &none      &none       &none     &none  &sys_reset
-                             &kp LCTRL  &kp LALT  &kp ENTER                                &none  &none      &none
+&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F12  &kp F7  &kp F8     &kp F9    &kp EQUAL  &none
+&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F11  &kp F4  &kp F5     &kp F6    &kp MINUS  &bootloader
+&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F10  &kp F1  &kp F2     &kp F3    &kp PLUS   &sys_reset
+                                &kp LCTRL   &kp LALT    &none                               &none    &none   &none
             >;
 
             sensor-bindings = <&scroll>;

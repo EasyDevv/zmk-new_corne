@@ -62,9 +62,9 @@ JOYSTICK POSITIONS
 
 // homerow therms
 
-#define TAP_TERM_MS 340
+#define TAP_TERM_MS 320
 #define QUICK_TAP_MS 175
-#define REQ_PRIOR_IDLE_MS 140
+#define REQ_PRIOR_IDLE_MS 150
 
 // combo terms
 

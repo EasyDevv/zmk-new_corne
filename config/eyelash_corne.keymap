@@ -493,9 +493,9 @@ JOYSTICK POSITIONS
         FN {
             display-name = "FN";
             bindings = <
-&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F12  &kp F7  &kp F8     &kp F9    &kp EQUAL  &none
-&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F11  &kp F4  &kp F5     &kp F6    &kp MINUS  &bootloader
-&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F10  &kp F1  &kp F2     &kp F3    &kp PLUS   &sys_reset
+&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F7  &kp F8   &kp F9  &kp F12  &kp EQUAL  &none
+&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F4  &kp F5   &kp F6  &kp F11  &kp MINUS  &bootloader
+&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F1  &kp F2   &kp F3  &kp F10  &kp PLUS   &sys_reset
                                 &kp LCTRL   &kp LALT    &none                               &none    &none   &none
             >;
 

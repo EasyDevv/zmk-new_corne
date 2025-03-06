@@ -44,7 +44,7 @@ layers:
   - '&td_lt'
   - '&td_copy'
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: '$$mdi:apple-keyboard-option$$', h: FN}
+  - {t: LANG HANGEUL, h: FN}
   - {t: '$$mdi:keyboard-return$$', h: NUMBER}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_slash'

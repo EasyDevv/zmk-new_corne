@@ -242,7 +242,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [0, 13]
@@ -257,78 +257,12 @@ combos:
 - p: [29, 30]
   k: Ctl+Z
   l: [QWERTY]
-- p: [30, 31]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [31, 32]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [7, 8]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [22, 23]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [36, 37]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [2, 15]
-  k: '!'
-  l: [QWERTY]
-- p: [3, 16]
-  k: '@'
-  l: [QWERTY]
-- p: [4, 17]
-  k: $
-  l: [QWERTY]
-- p: [5, 18]
-  k: '#'
-  l: [QWERTY]
-- p: [15, 30]
-  k: '%'
-  l: [QWERTY]
-- p: [16, 31]
-  k: ^
-  l: [QWERTY]
-- p: [17, 32]
-  k: '&'
-  l: [QWERTY]
-- p: [18, 33]
-  k: '*'
-  l: [QWERTY]
-- p: [7, 22]
-  k: {t: '-', s: _}
-  l: [QWERTY]
-- p: [8, 23]
-  k: +
-  l: [QWERTY]
-- p: [9, 24]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [10, 25]
-  k: '?'
-  l: [QWERTY]
 - p: [22, 36]
   k: _
   l: [QWERTY]
 - p: [23, 37]
   k: {t: '=', s: +}
   l: [QWERTY]
-- p: [25, 26]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [39, 40]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
 - p: [12, 27]
   k: Gui+$$mdi:arrow-down-bold$$
-  l: [QWERTY]
-- p: [26, 27]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [40, 41]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
-  l: [QWERTY]
-- p: [44, 45]
-  k: {t: '$$mdi:minus-circle-outline$$', type: none}
   l: [QWERTY]

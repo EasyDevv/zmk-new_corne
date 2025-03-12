@@ -270,7 +270,7 @@ JOYSTICK POSITIONS
 &lt 1 ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y         &kp U         &kp I             &kp O           &kp P       &td_sqt
 &lhm LS(TAB) TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_lbrc
 &lhm LC(Z) LC(Y)    &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N         &kp M         &rhm COMMA DOT    &rhm SEMI COLON  &td_lbkt    &td_lt
-                                      &td_copy     &lt 2 SPACE   &lt 3 LANG_HANGEUL                                                                 &lt 4 ENTER   &kp BSPC      &td_slash
+                                      &td_copy     &lt 2 SPACE   &lt 4 LANG_HANGEUL                                                                 &lt 3 ENTER   &kp BSPC      &td_slash
             >;
 
             sensor-bindings = <&scroll>;
@@ -303,22 +303,22 @@ JOYSTICK POSITIONS
         FN {
             display-name = "FN";
             bindings = <
-&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F7  &kp F8   &kp F9  &kp F12  &kp EQUAL  &none
-&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F4  &kp F5   &kp F6  &kp F11  &kp MINUS  &bootloader
-&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F1  &kp F2   &kp F3  &kp F10  &kp PLUS   &sys_reset
-                                &kp LCTRL   &kp LALT    &none                               &none    &none   &none
+&kp GRAVE   &kp LC(LS(ESC))   &kp F12   &kp F7     &kp F8     &kp F9                    &none          &none    &none      &none       &none      &none  &none
+&kp CAPS    &kp LA(TAB)       &kp F11   &kp F4     &kp F5     &kp F6             &none  &none  &none   &none    &kp LCTRL  &kp LSHIFT  &kp LALT   &kp LGUI  &bootloader
+&kp LSHIFT  &kp LC(LA(DEL))   &kp F10   &kp F1     &kp F2     &kp F3    &none           &none          &none    &none      &none       &none      &none  &sys_reset
+                              &kp MINUS  &kp UNDER  &kp EQUAL                                          &none    &none      &none
             >;
 
             sensor-bindings = <&scroll>;
         };
 
-        Number {
-            display-name = "NUMBER";
+        NUM {
+            display-name = "NUM";
             bindings = <
-&kp GRAVE   &kp BSPC  &kp N7  &kp N8     &kp N9    &kp EQUAL                  &none         &none  &none      &none       &none     &kp DEL  &kp BSPC
-&kp CAPS    &none     &kp N4  &kp N5     &kp N6    &kp MINUS           &none  &none  &none  &none  &kp LCTRL  &kp LSHIFT  &kp LALT  &none    &kp ESC
-&kp LSHIFT  &kp N0    &kp N1  &kp N2     &kp N3    &kp PLUS   &none           &none         &none  &none      &none       &none     &none    &none
-                              &kp LCTRL  &kp LALT  &kp ENTER                                &none  &kp LSHFT      &none
+&kp GRAVE   &none     &none     &none       &none      &none                   &none          &kp N7     &kp N8     &kp N9    &none   &none    &none
+&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none            &none  &none  &none   &kp N4     &kp N5     &kp N6    &none   &none    &none
+&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none          &kp N1     &kp N2     &kp N3    &kp N0  &none    &none
+                                &none       &none      &none                                  &kp PLUS  &kp MINUS   &kp EQUAL
             >;
 
             sensor-bindings = <&scroll>;

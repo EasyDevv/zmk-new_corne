@@ -303,10 +303,10 @@ JOYSTICK POSITIONS
         FN {
             display-name = "FN";
             bindings = <
-&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F7    &kp F8   &kp F9  &kp F12  &kp DEL   &kp INS
-&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F4    &kp F5   &kp F6  &kp F11  &kp END   &kp HOME
-&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F1    &kp F2   &kp F3  &kp F10  &kp PG_DN &kp PAGE_UP
-                                &kp LCTRL   &kp LALT    &none                               &kp PSCRN &kp SLCK  &kp PAUSE_BREAK
+&kp GRAVE   &none     &none     &none       &none      &none                   &none         &kp F7    &kp F8   &kp F9  &kp F12  &kp DEL   &kp INS
+&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none            &none  &none  &none  &kp F4    &kp F5   &kp F6  &kp F11  &kp END   &kp HOME
+&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none         &kp F1    &kp F2   &kp F3  &kp F10  &kp PG_DN &kp PAGE_UP
+                                &kp LCTRL   &kp LALT    &none                                &kp PSCRN &kp SLCK  &kp PAUSE_BREAK
             >;
 
             sensor-bindings = <&scroll>;
@@ -315,9 +315,9 @@ JOYSTICK POSITIONS
         NUM {
             display-name = "NUM";
             bindings = <
-&kp GRAVE   &none     &kp LS(N7)        &kp LS(N8)          &kp LS(N9)         &kp LS(EQUAL)                       &none          &kp N7     &kp N8     &kp N9    &kp EQUAL   &none    &none
+&kp GRAVE   &none     &kp LS(N7)        &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                       &none             &kp N7     &kp N8     &kp N9    &kp N0   &none    &none
 &kp CAPS    &kp LGUI  &lhm LALT LS(N4)  &lhm LSHIFT LS(N5)  &lhm LCTRL LS(N6)  &kp LS(MINUS)                &none  &none  &none   &kp N4     &kp N5     &kp N6    &kp MINUS   &none    &none
-&kp LSHIFT  &none     &kp LS(N1)        &kp LS(N2)          &kp LS(N3)         &kp LS(N0)     &none                &none          &kp N1     &kp N2     &kp N3    &kp N0      &none    &none
+&kp LSHIFT  &none     &kp LS(N1)        &kp LS(N2)          &kp LS(N3)         &kp LS(EQUAL)     &none                &none       &kp N1     &kp N2     &kp N3    &kp EQUAL   &none    &none
                                         &tog 4              &kp SPACE          &none                                              &kp ENTER  &kp BSPC   &td_slash
             >;
 

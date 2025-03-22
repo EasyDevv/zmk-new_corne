@@ -267,10 +267,10 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 1 ESC     &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y         &kp U         &kp I             &kp O           &kp P       &td_sqt
-&lhm LS(TAB) TAB     &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_lbrc
-&lhm LC(Z) LC(Y)    &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N         &kp M         &rhm COMMA DOT    &rhm SEMI COLON  &td_lbkt    &td_lt
-                                      &td_copy     &lt 2 SPACE   &lt 4 LANG_HANGEUL                                                                 &lt 3 ENTER   &kp BSPC      &td_slash
+&lt 1 ESC         &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                     &kp Y         &kp U         &kp I             &kp O           &kp P       &td_sqt
+&lhm LS(TAB) TAB  &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK                 &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L     &td_lpar    &td_lbrc
+&td_copy          &kp Z        &kp X        &kp C          &kp V         &kp B        &mkp RCLK                    &mmv MOVE_DOWN                   &kp N         &kp M         &rhm COMMA DOT    &rhm SEMI COLON  &td_lbkt    &td_lt
+                               &tog 4       &lt 2 SPACE    &lt 3  LANG_HANGEUL                                                                 &lt  ENTER   &kp BSPC      &td_slash
             >;
 
             sensor-bindings = <&scroll>;
@@ -280,8 +280,8 @@ JOYSTICK POSITIONS
             display-name = "BT";
             bindings = <
 &none  &none            &none           &none         &none         &none                                     &mmv UP                &none            &kp PG_UP        &kp UP           &kp PG_DN            &none  &none
-&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv LEFT  &mkp RCLK  &mmv RIGHT  &none            &kp LEFT         &kp DOWN         &kp RIGHT            &none  &none
-&none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none         &none         &rgb_ug RGB_EFF  &kp C_MUTE               &mmv DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none
+&none  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv LEFT  &mkp RCLK  &mmv RIGHT  &none            &kp LEFT         &kp DOWN         &kp RIGHT            &none  &bootloader
+&none  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &none         &none         &rgb_ug RGB_EFF  &kp C_MUTE               &mmv DOWN              &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none   &sys_reset
                                         &none         &none         &none                                                            &none            &none            &none
             >;
 
@@ -291,7 +291,7 @@ JOYSTICK POSITIONS
         raise_layer {
             display-name = "NAV";
             bindings = <
-&none     &none     &none     &none       &none      &none                  &none         &none  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL   &kp BSPC
+&kp GRAVE &none     &none     &none       &none      &none                  &none         &none  &kp PG_UP  &kp UP    &kp PG_DN  &kp DEL   &kp BSPC
 &kp CAPS  &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &none  &kp LEFT   &kp DOWN  &kp RIGHT  &kp HOME  &kp ESC
 &none     &none     &none     &none       &none      &none  &none           &none         &none  &none      &none     &none      &kp END   &kp INS
                               &none       &none      &none                                &none  &none      &none
@@ -303,10 +303,10 @@ JOYSTICK POSITIONS
         FN {
             display-name = "FN";
             bindings = <
-&kp GRAVE   &kp LC(LS(ESC))   &kp F12   &kp F7     &kp F8     &kp F9                    &none          &none    &none      &none       &none      &none  &none
-&kp CAPS    &kp LA(TAB)       &kp F11   &kp F4     &kp F5     &kp F6             &none  &none  &none   &none    &kp LCTRL  &kp LSHIFT  &kp LALT   &kp LGUI  &bootloader
-&kp LSHIFT  &kp LC(LA(DEL))   &kp F10   &kp F1     &kp F2     &kp F3    &none           &none          &none    &none      &none       &none      &none  &sys_reset
-                              &kp MINUS  &kp UNDER  &kp EQUAL                                          &none    &none      &none
+&kp GRAVE   &none     &none     &none       &none      &none                  &none         &kp F7  &kp F8   &kp F9  &kp F12  &kp DEL   &kp INS
+&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none           &none  &none  &none  &kp F4  &kp F5   &kp F6  &kp F11  &kp END   &kp HOME
+&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none        &kp F1  &kp F2   &kp F3  &kp F10  &kp PG_DN &kp PAGE_UP
+                                &kp LCTRL   &kp LALT    &none                               &kp PSCRN &kp SLCK  &kp PAUSE_BREAK
             >;
 
             sensor-bindings = <&scroll>;
@@ -315,10 +315,10 @@ JOYSTICK POSITIONS
         NUM {
             display-name = "NUM";
             bindings = <
-&kp GRAVE   &none     &none     &none       &none      &none                   &none          &kp N7     &kp N8     &kp N9    &none   &none    &none
-&kp CAPS    &kp LGUI  &kp LALT  &kp LSHIFT  &kp LCTRL  &none            &none  &none  &none   &kp N4     &kp N5     &kp N6    &none   &none    &none
-&kp LSHIFT  &none     &none     &none       &none      &none   &none           &none          &kp N1     &kp N2     &kp N3    &kp N0  &none    &none
-                                &none       &none      &none                                  &kp PLUS  &kp MINUS   &kp EQUAL
+&kp GRAVE   &none     &none       &kp LS(N7)          &kp LS(N8)         &kp LS(N9)                       &none          &kp N7     &kp N8     &kp N9    &kp EQUAL   &none    &none
+&kp CAPS    &kp LGUI  &kp LALT    &lhm LSHIFT LS(N4)  &lhm LCTRL LS(N5)  &kp LS(N6)                &none  &none  &none   &kp N4     &kp N5     &kp N6    &kp MINUS   &none    &none
+&kp LSHIFT  &none     &kp LS(N0)  &kp LS(N1)          &kp LS(N2)         &kp LS(N3)  &none                &none          &kp N1     &kp N2     &kp N3    &kp N0      &none    &none
+                                  &tog 4              &kp SPACE          &none                                                      &kp ENTER  &kp BSPC   &td_slash
             >;
 
             sensor-bindings = <&scroll>;

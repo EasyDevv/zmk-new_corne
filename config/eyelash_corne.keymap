@@ -217,43 +217,51 @@ JOYSTICK POSITIONS
 
         // Left - <1 2> <14 15> <29 30>
 
-        qw {
-            bindings = <&kp LC(A)>;
-            key-positions = <1 2>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
+        // qw {
+        //     bindings = <&kp LC(A)>;
+        //     key-positions = <1 2>;
+        //     layers = <0>;
+        //     timeout-ms = <COMBO_IDLE_FAST>;
+        //     require-prior-idle-ms = <COMBO_TERM_FAST>;
+        // };
 
-        as {
-            bindings = <&kp LC(S)>;
-            key-positions = <14 15>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
+        // as {
+        //     bindings = <&kp LC(S)>;
+        //     key-positions = <14 15>;
+        //     layers = <0>;
+        //     timeout-ms = <COMBO_IDLE_FAST>;
+        //     require-prior-idle-ms = <COMBO_TERM_FAST>;
+        // };
 
-        zx {
-            bindings = <&kp LC(Z)>;
-            key-positions = <29 30>;
-            layers = <0>;
-            timeout-ms = <COMBO_IDLE_FAST>;
-            require-prior-idle-ms = <COMBO_TERM_FAST>;
-        };
+        // zx {
+        //     bindings = <&kp LC(Z)>;
+        //     key-positions = <29 30>;
+        //     layers = <0>;
+        //     timeout-ms = <COMBO_IDLE_FAST>;
+        //     require-prior-idle-ms = <COMBO_TERM_FAST>;
+        // };
 
         // Right - <22 36> <23 37> <24 38> <25 39>
 
-        hn {
+        under {
             bindings = <&kp UNDER>;
-            key-positions = <22 36>;
+            key-positions = <40 41>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
         };
 
-        jm {
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <26 27>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
+        };
+
+        equal {
             bindings = <&kp EQUAL>;
-            key-positions = <23 37>;
+            key-positions = <11 12>;
             layers = <0>;
             timeout-ms = <COMBO_IDLE_SLOW>;
             require-prior-idle-ms = <COMBO_TERM_SLOW>;
@@ -277,7 +285,7 @@ JOYSTICK POSITIONS
 &lt 1 ESC         &kp Q        &kp W        &kp E          &kp R         &kp T                                     &mmv MOVE_UP                  &kp Y         &kp U         &kp I             &kp O            &kp P       &td_sqt
 &lhm LS(TAB) TAB  &lhm LGUI A  &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K     &rhm LALT L      &td_lpar    &td_lbrc
 &td_copy          &kp Z        &kp X        &kp C          &kp V         &kp B    &mkp RCLK                        &mmv MOVE_DOWN                &kp N         &kp M         &rhm COMMA DOT    &rhm SEMI COLON  &td_lbkt    &td_lt
-                                            &tog 4         &lt 2 SPACE   &lt 3 LANG_HANGEUL                                                      &kp ENTER     &kp BSPC       &td_slash
+                                            &tog 4         &lt 2 SPACE   &lt 3 LANG_HANGEUL                                                      &rhm LS(ENTER) ENTER     &kp BSPC       &td_slash
             >;
 
             sensor-bindings = <&scroll>;

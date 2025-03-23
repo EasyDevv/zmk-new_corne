@@ -322,9 +322,9 @@ JOYSTICK POSITIONS
         NUM {
             display-name = "NUM";
             bindings = <
-&kp GRAVE   &none     &kp LS(N7)        &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                       &none             &kp N7     &kp N8     &kp N9    &kp N0   &none    &none
-&kp CAPS    &kp LGUI  &lhm LALT LS(N4)  &lhm LSHIFT LS(N5)  &lhm LCTRL LS(N6)  &kp LS(MINUS)                &none  &none  &none   &kp N4     &kp N5     &kp N6    &kp MINUS   &none    &none
-&td_copy    &none     &kp LS(N1)        &kp LS(N2)          &kp LS(N3)         &kp LS(EQUAL)     &none                &none       &kp N1     &kp N2     &kp N3    &kp EQUAL   &none    &none
+&kp ESC           &none     &kp LS(N7)        &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                       &none             &kp N7     &kp N8     &kp N9    &kp N0   &none    &none
+&lhm LS(TAB) TAB  &kp LGUI  &lhm LALT LS(N4)  &lhm LSHIFT LS(N5)  &lhm LCTRL LS(N6)  &kp LS(MINUS)                &none  &none  &none   &kp N4     &kp N5     &kp N6    &kp MINUS   &none    &none
+&td_copy          &none     &kp LS(N1)        &kp LS(N2)          &kp LS(N3)         &kp LS(EQUAL)     &none                &none       &kp N1     &kp N2     &kp N3    &kp EQUAL   &none    &none
                                         &tog 4              &lt 2 SPACE        &tog 4                                              &kp ENTER  &kp BSPC   &td_undo
             >;
 

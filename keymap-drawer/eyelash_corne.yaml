@@ -197,7 +197,7 @@ layers:
   - SLCK
   - PAUSE BREAK
   NUM:
-  - {t: '`', s: '~'}
+  - $$mdi:keyboard-esc$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Sft+7, s: Sft+&}
   - {t: Sft+8, s: Sft+*}
@@ -210,7 +210,7 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-tab-reverse$$'}
   - LGUI
   - {t: Sft+4, h: '$$mdi:apple-keyboard-option$$', s: Sft+$}
   - {t: Sft+5, h: '$$mdi:apple-keyboard-shift$$', s: Sft+%}

@@ -152,6 +152,13 @@ JOYSTICK POSITIONS
             bindings = <&lhm LC(C) LC(V)>,  <&kp LC(X)>;
         };
 
+        td_undo: td_undo {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAPDANCE_TERM>;
+            bindings = <&lhm LC(Y) LC(Z)>,  <&kp LC(X)>;
+        };
+
 
         lhm: left_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -318,7 +325,7 @@ JOYSTICK POSITIONS
 &kp GRAVE   &none     &kp LS(N7)        &kp LS(N8)          &kp LS(N9)         &kp LS(N0)                       &none             &kp N7     &kp N8     &kp N9    &kp N0   &none    &none
 &kp CAPS    &kp LGUI  &lhm LALT LS(N4)  &lhm LSHIFT LS(N5)  &lhm LCTRL LS(N6)  &kp LS(MINUS)                &none  &none  &none   &kp N4     &kp N5     &kp N6    &kp MINUS   &none    &none
 &td_copy    &none     &kp LS(N1)        &kp LS(N2)          &kp LS(N3)         &kp LS(EQUAL)     &none                &none       &kp N1     &kp N2     &kp N3    &kp EQUAL   &none    &none
-                                        &tog 4              &kp SPACE          &none                                              &kp ENTER  &kp BSPC   &td_slash
+                                        &tog 4              &lt 2 SPACE        &tog 4                                              &kp ENTER  &kp BSPC   &td_undo
             >;
 
             sensor-bindings = <&scroll>;

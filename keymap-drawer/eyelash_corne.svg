@@ -542,10 +542,11 @@ rect.held, rect.combo.held {
 <a href="#FN">
 <text x="0" y="24" class="key hold layer-activator">FN</text>
 </a></g>
-<g transform="translate(632, 224) rotate(-24.0)" class="key enter keypos-45">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key enter side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key enter"/>
-<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-9" y="-13" height="18" width="18.0" class="key enter tap glyph mdi:keyboard-return"/>
+<g transform="translate(632, 224) rotate(-24.0)" class="key keypos-45">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:keyboard-return"/>
+<use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:keyboard-return"/>
 </g>
 <g transform="translate(695, 209) rotate(-12.0)" class="key backspace keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key backspace side"/>
@@ -562,27 +563,20 @@ rect.held, rect.combo.held {
 <text x="28" y="77" class="combo tap">Alt+F4</text>
 </g>
 <g class="combo combopos-1">
-<rect rx="6" ry="6" x="98" y="29" width="28" height="26" class="combo"/>
-<text x="112" y="42" class="combo tap">Ctl+A</text>
+<rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo"/>
+<text x="924" y="161" class="combo tap">_</text>
 </g>
 <g class="combo combopos-2">
-<rect rx="6" ry="6" x="98" y="85" width="28" height="26" class="combo"/>
-<text x="112" y="98" class="combo tap">Ctl+S</text>
+<rect rx="6" ry="6" x="910" y="92" width="28" height="26" class="combo"/>
+<text x="924" y="105" class="combo tap">-</text>
+<text x="924" y="94" class="combo shifted">_</text>
 </g>
 <g class="combo combopos-3">
-<rect rx="6" ry="6" x="98" y="141" width="28" height="26" class="combo"/>
-<text x="112" y="154" class="combo tap">Ctl+Z</text>
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<text x="924" y="49" class="combo tap">=</text>
+<text x="924" y="38" class="combo shifted">+</text>
 </g>
 <g class="combo combopos-4">
-<rect rx="6" ry="6" x="658" y="112" width="28" height="26" class="combo"/>
-<text x="672" y="125" class="combo tap">_</text>
-</g>
-<g class="combo combopos-5">
-<rect rx="6" ry="6" x="714" y="106" width="28" height="26" class="combo"/>
-<text x="728" y="119" class="combo tap">=</text>
-<text x="728" y="108" class="combo shifted">+</text>
-</g>
-<g class="combo combopos-6">
 <rect rx="6" ry="6" x="938" y="64" width="28" height="26" class="combo"/>
 <use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="943" y="68" height="18" width="18.0" class="combo tap glyph mdi:arrow-down-bold"/>
 </g>

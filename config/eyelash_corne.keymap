@@ -271,7 +271,7 @@ JOYSTICK POSITIONS
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <17 44>;
+            key-positions = <18 44>;
             layers = <0 4>;
             timeout-ms = <COMBO_IDLE_FAST>;
             require-prior-idle-ms = <COMBO_TERM_FAST>;

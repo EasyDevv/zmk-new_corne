@@ -559,28 +559,42 @@ rect.held, rect.combo.held {
 <text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;td_slash</tspan></text>
 </g>
 <g class="combo combopos-0">
+<rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo"/>
+<text x="924" y="161" class="combo tap">_</text>
+</g>
+<g class="combo combopos-1">
+<rect rx="6" ry="6" x="910" y="92" width="28" height="26" class="combo"/>
+<text x="924" y="105" class="combo tap">-</text>
+<text x="924" y="94" class="combo shifted">_</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<text x="924" y="49" class="combo tap">=</text>
+<text x="924" y="38" class="combo shifted">+</text>
+</g>
+<g class="combo combopos-3">
 <path d="M269,150 l-12,-41" class="combo"/>
 <path d="M269,150 l12,41" class="combo"/>
 <rect rx="6" ry="6" x="255" y="137" width="28" height="26" class="combo"/>
 <text x="269" y="150" class="combo tap">Ctl+C</text>
 </g>
-<g class="combo combopos-1">
+<g class="combo combopos-4">
 <path d="M300,158 l-37,-52" class="combo"/>
 <path d="M300,158 l37,52" class="combo"/>
 <rect rx="6" ry="6" x="286" y="145" width="28" height="26" class="combo"/>
 <text x="300" y="158" class="combo tap">Ctl+V</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-5">
 <path d="M711,150 l12,-41" class="combo"/>
 <path d="M711,150 l-12,41" class="combo"/>
 <rect rx="6" ry="6" x="697" y="137" width="28" height="26" class="combo"/>
 <text x="711" y="150" class="combo tap">Ctl+S</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-6">
 <rect rx="6" ry="6" x="14" y="64" width="28" height="26" class="combo"/>
 <text x="28" y="77" class="combo tap">Alt+F4</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-7">
 <rect rx="6" ry="6" x="938" y="64" width="28" height="26" class="combo"/>
 <use href="#mdi:arrow-down-bold" xlink:href="#mdi:arrow-down-bold" x="943" y="68" height="18" width="18.0" class="combo tap glyph mdi:arrow-down-bold"/>
 </g>

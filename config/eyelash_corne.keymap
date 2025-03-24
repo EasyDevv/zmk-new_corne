@@ -237,29 +237,29 @@ JOYSTICK POSITIONS
 
         // Right - <22 36> <23 37> <24 38> <25 39>
 
-        // under {
-        //     bindings = <&kp UNDER>;
-        //     key-positions = <40 41>;
-        //     layers = <0>;
-        //     timeout-ms = <COMBO_IDLE_SLOW>;
-        //     require-prior-idle-ms = <COMBO_TERM_SLOW>;
-        // };
+        under {
+            bindings = <&kp UNDER>;
+            key-positions = <40 41>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
+        };
 
-        // minus {
-        //     bindings = <&kp MINUS>;
-        //     key-positions = <26 27>;
-        //     layers = <0>;
-        //     timeout-ms = <COMBO_IDLE_SLOW>;
-        //     require-prior-idle-ms = <COMBO_TERM_SLOW>;
-        // };
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <26 27>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
+        };
 
-        // equal {
-        //     bindings = <&kp EQUAL>;
-        //     key-positions = <11 12>;
-        //     layers = <0>;
-        //     timeout-ms = <COMBO_IDLE_SLOW>;
-        //     require-prior-idle-ms = <COMBO_TERM_SLOW>;
-        // };
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <11 12>;
+            layers = <0>;
+            timeout-ms = <COMBO_IDLE_SLOW>;
+            require-prior-idle-ms = <COMBO_TERM_SLOW>;
+        };
 
         copy {
             bindings = <&kp LC(C)>;

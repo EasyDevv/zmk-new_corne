@@ -27,9 +27,9 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - '&td_rpar'
   - '&td_lpar'
-  - '&td_lbrc'
-  - '&td_copy'
+  - '&td_undo'
   - Z
   - X
   - C
@@ -41,8 +41,8 @@ layers:
   - M
   - {t: ., h: ',', s: '>'}
   - {t: ':', h: ;}
+  - '&td_rbkt'
   - '&td_lbkt'
-  - '&td_lt'
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: LANG HANGEUL, h: FN}
@@ -176,7 +176,7 @@ layers:
   - F11
   - END
   - HOME
-  - '&td_copy'
+  - '&td_undo'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -225,7 +225,7 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&td_copy'
+  - '&td_undo'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: Sft+1, s: Sft+!}
   - {t: Sft+2, s: Sft+@}
@@ -242,21 +242,21 @@ layers:
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: NUM, h: toggle}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&td_undo'
+  - Ctl+S
 combos:
+- p: [17, 43]
+  k: Ctl+C
+  l: [QWERTY, NUM]
+- p: [17, 44]
+  k: Ctl+V
+  l: [QWERTY, NUM]
+- p: [23, 46]
+  k: Ctl+S
+  l: [QWERTY, NUM]
 - p: [0, 13]
   k: Alt+F4
-  l: [QWERTY]
-- p: [40, 41]
-  k: _
-  l: [QWERTY]
-- p: [26, 27]
-  k: {t: '-', s: _}
-  l: [QWERTY]
-- p: [11, 12]
-  k: {t: '=', s: +}
   l: [QWERTY]
 - p: [12, 27]
   k: Gui+$$mdi:arrow-down-bold$$

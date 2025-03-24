@@ -246,6 +246,15 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - Ctl+S
 combos:
+- p: [40, 41]
+  k: _
+  l: [QWERTY]
+- p: [26, 27]
+  k: {t: '-', s: _}
+  l: [QWERTY]
+- p: [11, 12]
+  k: {t: '=', s: +}
+  l: [QWERTY]
 - p: [17, 43]
   k: Ctl+C
   l: [QWERTY, NUM]

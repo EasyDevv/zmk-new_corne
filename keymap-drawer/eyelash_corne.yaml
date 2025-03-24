@@ -46,7 +46,7 @@ layers:
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: LANG HANGEUL, h: FN}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_slash'
   BT:
@@ -249,19 +249,13 @@ combos:
 - p: [0, 13]
   k: Alt+F4
   l: [QWERTY]
-- p: [1, 2]
-  k: Ctl+A
-  l: [QWERTY]
-- p: [14, 15]
-  k: Ctl+S
-  l: [QWERTY]
-- p: [29, 30]
-  k: Ctl+Z
-  l: [QWERTY]
-- p: [22, 36]
+- p: [40, 41]
   k: _
   l: [QWERTY]
-- p: [23, 37]
+- p: [26, 27]
+  k: {t: '-', s: _}
+  l: [QWERTY]
+- p: [11, 12]
   k: {t: '=', s: +}
   l: [QWERTY]
 - p: [12, 27]

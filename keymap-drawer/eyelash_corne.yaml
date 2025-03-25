@@ -27,8 +27,8 @@ layers:
   - {t: J, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - '&td_rpar'
   - '&td_lpar'
+  - '&td_rpar'
   - '&td_undo'
   - Z
   - X
@@ -41,8 +41,8 @@ layers:
   - M
   - {t: ., h: ',', s: '>'}
   - {t: ':', h: ;}
-  - '&td_rbkt'
   - '&td_lbkt'
+  - '&td_rbkt'
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: LANG HANGEUL, h: FN}

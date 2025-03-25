@@ -240,7 +240,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: NUM, h: toggle}
-  - {t: '$$mdi:keyboard-space$$', h: NAV}
+  - {t: '$$mdi:keyboard-space$$', h: '2'}
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}

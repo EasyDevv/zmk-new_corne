@@ -198,11 +198,11 @@ layers:
   - PAUSE BREAK
   NUM:
   - $$mdi:keyboard-esc$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Sft+7, s: Sft+&}
-  - {t: Sft+8, s: Sft+*}
-  - {t: Sft+9, s: Sft+(}
-  - {t: Sft+0, s: Sft+)}
+  - Q
+  - W
+  - E
+  - R
+  - T
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
@@ -211,36 +211,36 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-tab-reverse$$'}
-  - LGUI
-  - {t: Sft+4, h: '$$mdi:apple-keyboard-option$$', s: Sft+$}
-  - {t: Sft+5, h: '$$mdi:apple-keyboard-shift$$', s: Sft+%}
-  - {t: Sft+6, h: '$$mdi:apple-keyboard-control$$', s: Sft+^}
-  - {t: Sft+-, s: Sft+_}
+  - {t: A, h: LGUI}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
+  - G
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '4', s: $}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '-', s: _}
+  - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-shift$$', s: ^}
+  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '&td_undo'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Sft+1, s: Sft+!}
-  - {t: Sft+2, s: Sft+@}
-  - {t: Sft+3, s: Sft+#}
-  - {t: Sft+=, s: Sft++}
+  - Z
+  - X
+  - C
+  - V
+  - B
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
-  - {t: '=', s: +}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ., h: ',', s: '>'}
+  - {t: ':', h: ;}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: NUM, h: toggle}
-  - {t: '$$mdi:keyboard-space$$', h: '2'}
+  - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -258,7 +258,7 @@ combos:
 - p: [17, 43]
   k: Ctl+C
   l: [QWERTY, NUM]
-- p: [18, 44]
+- p: [16, 42]
   k: Ctl+V
   l: [QWERTY, NUM]
 - p: [23, 46]

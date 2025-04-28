@@ -45,7 +45,7 @@ layers:
   - '&td_rbkt'
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: LANG HANGEUL, h: FN}
+  - {t: '$$mdi:apple-keyboard-option$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_slash'
@@ -100,18 +100,18 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   NUM:
   - $$mdi:keyboard-esc$$
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - {t: '0', s: )}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&td_sqt'
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-tab-reverse$$'}
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -121,12 +121,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '4', s: $}
-  - {t: '5', h: '$$mdi:apple-keyboard-control$$', s: '%'}
-  - {t: '6', h: '$$mdi:apple-keyboard-shift$$', s: ^}
-  - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - H
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - '&td_lpar'
+  - '&td_rpar'
   - '&td_undo'
   - Z
   - X
@@ -135,18 +135,18 @@ layers:
   - B
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - N
+  - M
   - {t: ., h: ',', s: '>'}
   - {t: ':', h: ;}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&td_lbkt'
+  - '&td_rbkt'
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - Ctl+S
+  - '&td_slash'
   FN:
   - {t: '`', s: '~'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -248,25 +248,25 @@ layers:
 combos:
 - p: [40, 41]
   k: _
-  l: [QWERTY]
+  l: [QWERTY, NUM]
 - p: [26, 27]
   k: {t: '-', s: _}
-  l: [QWERTY]
+  l: [QWERTY, NUM]
 - p: [11, 12]
   k: {t: '=', s: +}
-  l: [QWERTY]
+  l: [QWERTY, NUM]
 - p: [17, 43]
   k: Ctl+C
-  l: [QWERTY, NAV]
+  l: [QWERTY, NUM]
 - p: [16, 42]
   k: Ctl+V
-  l: [QWERTY, NAV]
+  l: [QWERTY, NUM]
 - p: [23, 46]
   k: Ctl+S
-  l: [QWERTY, NAV]
+  l: [QWERTY, NUM]
 - p: [0, 13]
   k: Alt+F4
-  l: [QWERTY]
+  l: [QWERTY, NUM]
 - p: [12, 27]
   k: Gui+$$mdi:arrow-down-bold$$
-  l: [QWERTY]
+  l: [QWERTY, NUM]

@@ -45,7 +45,7 @@ layers:
   - '&td_rbkt'
   - {t: NUM, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: NAV}
-  - {t: '$$mdi:apple-keyboard-option$$', h: FN}
+  - {t: LANG1, h: FN}
   - {t: '$$mdi:keyboard-return$$', h: 'Sft+$$mdi:keyboard-return$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - '&td_slash'
@@ -259,7 +259,7 @@ combos:
   k: Ctl+C
   l: [QWERTY, NUM]
 - p: [16, 42]
-  k: Ctl+V
+  k: Ctl+Sft+V
   l: [QWERTY, NUM]
 - p: [23, 46]
   k: Ctl+S

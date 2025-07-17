@@ -2,15 +2,15 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - {t: '$$mdi:keyboard-esc$$', h: BT}
-  - Q
-  - W
-  - E
-  - R
-  - T
+  - {t: Q, h: Sft+1}
+  - {t: W, h: Sft+2}
+  - {t: E, h: Sft+3}
+  - {t: R, h: Sft+4}
+  - {t: T, h: Sft+5}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - Y
-  - U
-  - I
+  - {t: Y, h: Sft+6}
+  - {t: U, h: Sft+7}
+  - {t: I, h: Sft+8}
   - O
   - P
   - '&td_sqt'
@@ -255,14 +255,11 @@ combos:
 - p: [11, 12]
   k: {t: '=', s: +}
   l: [QWERTY, NUM]
-- p: [17, 43]
+- p: [17, 13]
   k: Ctl+C
   l: [QWERTY, NUM]
-- p: [16, 42]
+- p: [16, 13]
   k: Ctl+Sft+V
-  l: [QWERTY, NUM]
-- p: [23, 46]
-  k: Ctl+S
   l: [QWERTY, NUM]
 - p: [0, 13]
   k: Alt+F4

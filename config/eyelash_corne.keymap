@@ -320,10 +320,10 @@ JOYSTICK POSITIONS
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 1 ESC         &lt EXCL Q     &lt AT W     &lt HASH E     &lt DLLR R    &lt PRCNT T                              &mmv MOVE_UP                   &lt CARET Y   &lt AMPS U    &lt STAR I      &kp O            &kp P     &td_sqt
-&lhm LS(TAB) TAB  &lhm LGUI A    &lhm LALT S  &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K   &rhm LALT L      &td_lpar  &td_rpar
-&td_undo          &kp Z          &kp X        &kp C          &kp V         &kp B    &mkp RCLK                        &mmv MOVE_DOWN                &kp N         &kp M         &rhm COMMA DOT  &rhm SEMI COLON  &td_lbkt  &td_rbkt
-                                              &tog 2         &lt 4 SPACE   &lt 3 LANG1                                                      &rhm LS(ENTER) ENTER     &kp BSPC      &td_slash
+&lt 1 ESC         &mt LS(N1) Q   &mt LS(N2) W  &mt LS(N3) E   &mt LS(N4) R  &mt LS(N5) T                              &mmv MOVE_UP                  &mt LS(N6) Y  &mt LS(N7) U  &mt LS(N8) I    &kp  O           &kp P     &td_sqt
+&lhm LS(TAB) TAB  &lhm LGUI A    &lhm LALT S   &lhm LSHIFT D  &lhm LCTRL F  &kp G                     &mmv MOVE_LEFT  &mkp LCLK    &mmv MOVE_RIGHT  &kp H         &rhm LCTRL J  &rhm LSHIFT K   &rhm LALT L      &td_lpar  &td_rpar
+&td_undo          &kp Z          &kp X         &kp C          &kp V         &kp B    &mkp RCLK                        &mmv MOVE_DOWN                &kp N         &kp M         &rhm COMMA DOT  &rhm SEMI COLON  &td_lbkt  &td_rbkt
+                                            &tog 2         &lt 4 SPACE   &lt 3 LANG1                                                      &rhm LS(ENTER) ENTER     &kp BSPC      &td_slash
             >;
 
             sensor-bindings = <&scroll>;
